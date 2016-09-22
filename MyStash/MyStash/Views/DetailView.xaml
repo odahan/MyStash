@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
+             xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
+             x:Class="MyStash.Views.DetailView"
+             Title="{helpers:Translate ViewDetail_Title}" BackgroundColor="White">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Color x:Key="BackHigh">#9DF6FF</Color>
+      <Color x:Key="BackLow">#F0F0F0</Color>
+      <Color x:Key="Borders">#5CD0FD</Color>
+      <x:Double x:Key="FontSizeMini">12</x:Double>
+      <x:Double x:Key="FontSizeNormal">14</x:Double>
+      <x:Double x:Key="FontSizeData">16</x:Double>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="50"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="30"/>
+    </Grid.RowDefinitions>
+    <!-- Title -->
+    <StackLayout Grid.Row="0">
+      <Label Text="{Binding Title}" TextColor="Accent" FontSize="18" HorizontalOptions="Center" VerticalOptions="Start"/>
+      <BoxView HeightRequest="1" Color="Accent" HorizontalOptions="Fill" VerticalOptions="End" />
+    </StackLayout>
+
+    <ScrollView Grid.Row="1">
+      <StackLayout Spacing="6">
+        <!-- Category -->
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="33*"/>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Text="{helpers:Translate InfoSheet_CategoryDictionary_Login}" HorizontalTextAlignment="Center" FontAttributes="None" FontSize="{StaticResource FontSizeNormal}"
+                 BackgroundColor="{StaticResource BackLow}" VerticalTextAlignment="Center"
+                 HeightRequest="40">
+            <Label.Triggers>
+              <DataTrigger TargetType="Label" Binding="{Binding IsLoginCategory}" Value="True">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource BackHigh}"/>
+              </DataTrigger>
+            </Label.Triggers>
+          </Label>
+          <Label Grid.Column="1" Text="{helpers:Translate InfoSheet_CategoryDictionary_Note}" HorizontalTextAlignment="Center" FontAttributes="None" FontSize="{StaticResource FontSizeNormal}"
+                 BackgroundColor="{StaticResource BackLow}" VerticalTextAlignment="Center" HeightRequest="40">
+            <Label.Triggers>
+              <DataTrigger TargetType="Label" Binding="{Binding IsNoteCategory}" Value="True">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource BackHigh}"/>
+              </DataTrigger>
+            </Label.Triggers>
+          </Label>
+          <Label Grid.Column="2" Text="{helpers:Translate InfoSheet_CategoryDictionary_Misc}" HorizontalTextAlignment="Center" FontAttributes="None" FontSize="{StaticResource FontSizeNormal}"
+                 BackgroundColor="{StaticResource BackLow}" VerticalTextAlignment="Center" HeightRequest="40">
+            <Label.Triggers>
+              <DataTrigger TargetType="Label" Binding="{Binding IsMiscCategory}" Value="True">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource BackHigh}"/>
+              </DataTrigger>
+            </Label.Triggers>
+          </Label>
+        </Grid>
+
+        <!-- Pro / Personal -->
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Text="{helpers:Translate InfoSheet_ProFilterDictionary_Professional}" HorizontalTextAlignment="Center" FontSize="{StaticResource FontSizeNormal}" FontAttributes="None"
+                 BackgroundColor="{StaticResource BackLow}" VerticalTextAlignment="Center" HeightRequest="40">
+            <Label.Triggers>
+              <DataTrigger TargetType="Label" Binding="{Binding IsProfessional}" Value="True">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource BackHigh}"/>
+              </DataTrigger>
+            </Label.Triggers>
+          </Label>
+          <Label Grid.Column="1" Text="{helpers:Translate InfoSheet_ProFilterDictionary_Personal}" HorizontalTextAlignment="Center" FontSize="{StaticResource FontSizeNormal}" FontAttributes="None"
+                 BackgroundColor="{StaticResource BackLow}" VerticalTextAlignment="Center" HeightRequest="40">
+            <Label.Triggers>
+              <DataTrigger TargetType="Label" Binding="{Binding IsPersonal}" Value="True" >
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource BackHigh}"/>
+              </DataTrigger>
+            </Label.Triggers>
+          </Label>
+        </Grid>
+
+
+        <!-- Login / PW / Url -->
+        <Frame Padding="10" OutlineColor="{StaticResource Borders}" HasShadow="False" Margin="0,10,0,0" IsVisible="{Binding IsLoginCategory}">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition/>
+              <RowDefinition/>
+              <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="{helpers:Translate ViewDetail_NameOrURL}" VerticalTextAlignment="Center" FontSize="{StaticResource FontSizeMini}"/>
+            <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+              <Label Text="{Binding UrlOrName}" FontAttributes="Bold" FontSize="{StaticResource FontSizeData}" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <controls:TapImage Grid.Row="0" Grid.Column="2" Source="{helpers:ImageResource MyStash.Images.globalweb.png}" Command="{Binding GoToWebCommand}" HeightRequest="32" WidthRequest="32" Aspect="AspectFit">
+              <controls:TapImage.Triggers>
+                <Trigger TargetType="controls:TapImage" Property="IsEnabled" Value="False">
+                  <Setter Property="Opacity" Value="0.2"/>
+                </Trigger>
+              </controls:TapImage.Triggers>
+            </controls:TapImage>
+            <Label Grid.Row="1" Grid.Column="0" Text="{helpers:Translate InfoSheet_CategoryDictionary_Login}" VerticalTextAlignment="Center" FontSize="{StaticResource FontSizeMini}"/>
+            <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center">
+              <Label Text="{Binding Login}" FontAttributes="Bold" FontSize="{StaticResource FontSizeData}" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <controls:TapImage Grid.Row="1" Grid.Column="2" Source="{helpers:ImageResource MyStash.Images.globalcopyicon.png}" Command="{Binding CopyLoginCommand}" HeightRequest="32" WidthRequest="32" Aspect="AspectFit">
+              <controls:TapImage.Triggers>
+                <Trigger TargetType="controls:TapImage" Property="IsEnabled" Value="False">
+                  <Setter Property="Opacity" Value="0.2"/>
+                </Trigger>
+              </controls:TapImage.Triggers>
+            </controls:TapImage>
+            <Label Grid.Row="2" Grid.Column="0" Text="{helpers:Translate ViewDetail_Password}" VerticalTextAlignment="Center" FontSize="{StaticResource FontSizeMini}"/>
+            <StackLayout Grid.Row="2" Grid.Column="1" VerticalOptions="Center">
+              <Label Text="{Binding Password}" FontAttributes="Bold" FontSize="{StaticResource FontSizeData}" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <controls:TapImage Grid.Row="2" Grid.Column="2" Source="{helpers:ImageResource MyStash.Images.globalcopyicon.png}" Command="{Binding CopyPasswordCommand}" HeightRequest="32" WidthRequest="32" Aspect="AspectFit">
+              <controls:TapImage.Triggers>
+                <Trigger TargetType="controls:TapImage" Property="IsEnabled" Value="False">
+                  <Setter Property="Opacity" Value="0.2"/>
+                </Trigger>
+              </controls:TapImage.Triggers>
+            </controls:TapImage>
+          </Grid>
+        </Frame>
+
+
+        <!-- Note -->
+        <Frame Padding="10" OutlineColor="{StaticResource Borders}" IsVisible="{Binding IsNoteVisible}" HasShadow="False" Margin="0,10,0,0">
+          <StackLayout>
+            <Label Text="{Binding Note}" FontSize="{StaticResource FontSizeData}"/>
+            <controls:TapImage Source="{helpers:ImageResource MyStash.Images.globalcopyicon.png}" Command="{Binding CopyNoteCommand}"
+                               HeightRequest="32" WidthRequest="32" Aspect="AspectFit"
+                               HorizontalOptions="End"/>
+          </StackLayout>
+        </Frame>
+      </StackLayout>
+    </ScrollView>
+    <!-- Info -->
+    <Grid Grid.Row="2" VerticalOptions="End" >
+      <Label HorizontalOptions="Start" Text="{Binding CreatedOnStr}" TextColor="Black" FontSize="{StaticResource FontSizeMini}"/>
+      <Label HorizontalOptions="End" Text="{Binding ModifiedOnStr}" TextColor="Black" FontSize="{StaticResource FontSizeMini}"/>
+      <Label HorizontalOptions="Center" Text="{Binding Id}" TextColor="Gray" FontSize="{StaticResource FontSizeMini}"/>
+    </Grid>
+  </Grid>
+</ContentPage>

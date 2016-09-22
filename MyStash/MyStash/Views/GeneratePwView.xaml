@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
+             xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
+             x:Class="MyStash.Views.GeneratePwView"
+             Title="{helpers:Translate ViewGeneratePW_Title}">
+  <Grid Padding="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="5*"/>
+      <RowDefinition Height="5*"/>
+      <RowDefinition Height="45*"/>
+      <RowDefinition Height="15*"/>
+      <RowDefinition Height="30*"/>
+      <RowDefinition Height="50"/>
+    </Grid.RowDefinitions>
+
+    <Label Grid.Row="0" Text="{helpers:Translate ViewGeneratePW_Parameters}" TextColor="Accent" FontAttributes="Bold"/>
+
+    <StackLayout Grid.Row="1" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Spacing="8">
+      <Label Text="{helpers:Translate ViewGeneratePW_LeetModeSwitch}" VerticalTextAlignment="Center"/>
+      <Switch IsToggled="{Binding IsLeetMode}" VerticalOptions="Center"/>
+    </StackLayout>
+
+    <!-- Random Mode -->
+    <Frame Grid.Row="2" Padding="10" OutlineColor="#0096C9" HasShadow="False" IsVisible="{Binding IsRandomMode}" VerticalOptions="Center">
+      <StackLayout Spacing="20">
+        <Grid HorizontalOptions="FillAndExpand">
+          <Label Text="{helpers:Translate ViewGeneratePW_Length}" HorizontalOptions="Start" VerticalOptions="Center"/>
+          <Label FontAttributes="Bold" Text="{Binding PwLength}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+          <Stepper Increment="1" Minimum="4" Maximum="20" Value="{Binding PwLength}" HorizontalOptions="End" VerticalOptions="Center"/>
+        </Grid>
+        <Grid >
+          <Label Text="a..z" HorizontalOptions="Start" VerticalOptions="Center"/>
+          <Switch HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding LettersDown}"/>
+        </Grid>
+        <Grid >
+          <Label Text="A..Z" HorizontalOptions="Start" VerticalOptions="Center"/>
+          <Switch HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding LettersUp}"/>
+        </Grid>
+        <Grid >
+          <Label Text="0..9" HorizontalOptions="Start" VerticalOptions="Center"/>
+          <Switch HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding Numbers}"/>
+        </Grid>
+        <Grid>
+          <Label Text="{helpers:Translate ViewGeneratePW_Symbols}" HorizontalOptions="Start" VerticalOptions="Center"/>
+          <Switch HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding Symbols}"/>
+        </Grid>
+      </StackLayout>
+    </Frame>
+
+    <!-- Leet Mode -->
+    <Frame Grid.Row="2" Padding="10" OutlineColor="#0096C9" HasShadow="False" IsVisible="{Binding IsLeetMode}" VerticalOptions="Center">
+      <StackLayout Spacing="8">
+        <Label Text="{helpers:Translate ViewGeneratePW_OriginalWord}" HorizontalOptions="Start" VerticalOptions="Center"/>
+        <Entry Text="{Binding OriginalWord}" HorizontalOptions="Fill" VerticalOptions="Center" />
+        <Label Text="{helpers:Translate ViewGeneratePW_LeetLevel}"></Label>
+        <controls:BindablePicker VerticalOptions="Center" HorizontalOptions="Start" 
+                                 ItemsSource="{Binding LeetLevels}" DisplayProperty="Item2"
+          SelectedItem="{Binding SelectedStrength, Mode=TwoWay}" />
+      </StackLayout>
+    </Frame>
+
+
+    <Button Grid.Row="3" Text="{helpers:Translate ViewGeneratePW_Generate}" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" HeightRequest="50" BackgroundColor="#9DF6FF" Command="{Binding GenerateCommand}"/>
+
+    <Grid Grid.Row="4" >
+      <BoxView HorizontalOptions="Center" WidthRequest="250"  VerticalOptions="Center" BackgroundColor="#0096C9"/>
+      <Label  FontSize="22" Text="{Binding Generated}" HorizontalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="220" VerticalOptions="Center" TextColor="White" BackgroundColor="#0096C9"/>
+      <Image x:Name="CopyButton" Source="{helpers:ImageResource MyStash.Images.globalcopybutton.png}"  Aspect="Fill" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="40" WidthRequest="40">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Tapped="TapGestureRecognizerOnTapped"/>
+        </Image.GestureRecognizers>
+      </Image>
+    </Grid>
+    
+    <Button x:Name="ModalBackButton" Grid.Row="5" Text="{helpers:Translate ViewGeneratePW_BackButton}" WidthRequest="120" BackgroundColor="#9DF6FF" 
+            HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding ModalDismissCommand}" IsVisible="False"/>
+    
+  </Grid>
+</ContentPage>

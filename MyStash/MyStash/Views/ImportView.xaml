@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
+             x:Class="MyStash.Views.ImportView"
+             Title="{Binding Title}">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="10*"/>
+      <RowDefinition Height="90*"/>
+      <RowDefinition Height="40"/>
+    </Grid.RowDefinitions>
+    <Label Grid.Row="0" Text="{helpers:Translate ViewImport_Explanation}" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+    <Frame Grid.Row="1" OutlineColor="Fuchsia" HasShadow="False" Padding="8">
+      <Editor Text="{Binding Data}" />
+    </Frame>
+    <Grid Grid.Row="2">
+      <Button Text="{helpers:Translate DialogService_ShowMessage_Cancel}" WidthRequest="110" Command="{Binding CancelButtonCommand}" VerticalOptions="Center" HorizontalOptions="End"/>
+      <Button Text="{helpers:Translate DialogService_ShowMessage_Ok}" WidthRequest="110" Command="{Binding OkButtonCommand}" VerticalOptions="Center" HorizontalOptions="Start"/>
+    </Grid>
+  </Grid>
+</ContentPage>

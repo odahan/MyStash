@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>MyStash</value>
+    <comment>Application title</comment>
+  </data>
+  <data name="EventToCommandBehavior_CantRegisterEvent" xml:space="preserve">
+    <value>EventToCommandBehavior : Impossible d’enregistrer l’événement « {0} ».</value>
+  </data>
+  <data name="EventToCommandBehavior_CantDeRegisterEvent" xml:space="preserve">
+    <value>EventToCommandBehavior : Ne peut pas désenregistrer l’événement « {0} ».</value>
+  </data>
+  <data name="PasswordChecker_PasswordStrength_Unknown" xml:space="preserve">
+    <value>Inconnu</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Empty" xml:space="preserve">
+    <value>Vide</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Rejected" xml:space="preserve">
+    <value>Refusé</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Password_Length" xml:space="preserve">
+    <value>Longueur du mot de passe</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Uppercase_Letters" xml:space="preserve">
+    <value>Lettres majuscules</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Lowercase_Letters" xml:space="preserve">
+    <value>Lettres minuscules</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Numbers" xml:space="preserve">
+    <value>Nombres</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Symbols" xml:space="preserve">
+    <value>Symboles</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Middle_Numbers_or_Symbols" xml:space="preserve">
+    <value>Chiffres ou symboles au milieu</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Length_8" xml:space="preserve">
+    <value>Exigence. Longueur&gt;8</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Uppercase" xml:space="preserve">
+    <value>Exigence. Majuscules</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Lowercase" xml:space="preserve">
+    <value>Exigence. Minuscules</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Digit" xml:space="preserve">
+    <value>Exigence. Chiffres</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Symbol" xml:space="preserve">
+    <value>Exigence. Symboles</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails__3_or_more_requirments" xml:space="preserve">
+    <value>Respect de 3 exigences ou plus</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Less_than_3_requirments" xml:space="preserve">
+    <value>Respect de moins de 3 exigences</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Same_symbol" xml:space="preserve">
+    <value>Symbole répété</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Letters_only" xml:space="preserve">
+    <value>Que des lettres</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Numbers_only" xml:space="preserve">
+    <value>Que des chiffres</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Repeat_Characters__Case_Insensitive_" xml:space="preserve">
+    <value>Répétition de caractères (insensible à la casse)</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Consecutive_Uppercase_Letters" xml:space="preserve">
+    <value>Lettres majuscules consécutives</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Consecutive_Lowercase_Letters" xml:space="preserve">
+    <value>Lettres minuscules consécutives</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Consecutive_Numbers" xml:space="preserve">
+    <value>Chiffres consécutifs</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Sequential_Letters__3__" xml:space="preserve">
+    <value>Séquence de lettres (3 ou plus)</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Sequential_Numbers__3__" xml:space="preserve">
+    <value>Séquence de chiffres (3 ou plus)</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Very_Weak" xml:space="preserve">
+    <value>Très faible</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Weak" xml:space="preserve">
+    <value>Faible</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Good" xml:space="preserve">
+    <value>Bon</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Strong" xml:space="preserve">
+    <value>Fort</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Very_Strong" xml:space="preserve">
+    <value>Très fort</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Ultra_Strong" xml:space="preserve">
+    <value>Ultra fort</value>
+  </data>
+  <data name="PasswordChecker_createMemoryTable_Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="StringExtensions_Contains_substring_cannot_be_null_" xml:space="preserve">
+    <value>la sous-chaîne ne peut pas être null.</value>
+  </data>
+  <data name="StringExtensions_Contains_comp_is_not_a_member_of_StringComparison" xml:space="preserve">
+    <value>argument 'comp' n’est pas membre de StringComparison</value>
+  </data>
+  <data name="InfoSheet_ProFilterDictionary_All" xml:space="preserve">
+    <value>Tout</value>
+  </data>
+  <data name="InfoSheet_ProFilterDictionary_Personal" xml:space="preserve">
+    <value>Personnel</value>
+  </data>
+  <data name="InfoSheet_ProFilterDictionary_Professional" xml:space="preserve">
+    <value>Professionnel</value>
+  </data>
+  <data name="InfoSheet_CategoryDictionary_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="InfoSheet_CategoryDictionary_Misc" xml:space="preserve">
+    <value>Divers</value>
+  </data>
+  <data name="InfoSheet_CategoryDictionary_Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="DialogService_ShowMessage_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="NavigationService_getPage_Page_inconnue" xml:space="preserve">
+    <value>Page inconnue : {0}. NavigationService.Configure a-t-il été oublié ?</value>
+  </data>
+  <data name="NavigationService_getPage_Page_inconnueConfigure" xml:space="preserve">
+    <value>Page inconnue : {0}. NavigationService.Configure a-t-il été oublié ?</value>
+  </data>
+  <data name="NavigationService_getPage_Aucun_constructeur_approprié_trouvé" xml:space="preserve">
+    <value>Aucun constructeur approprié trouvé verser {0}</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Login_copied_to_clipboard" xml:space="preserve">
+    <value>Login vers presse-papiers</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_The_login_has_been_copied_to_the_clipboard" xml:space="preserve">
+    <value>Le login a été copié dans le presse-papiers</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Password_copied_to_clipboard" xml:space="preserve">
+    <value>Mot de passe vers presse-papiers</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_The_password_has_been_copied_to_the_clipboard" xml:space="preserve">
+    <value>Le mot de passe a été copié dans le presse-papiers</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Note_copied_to_clipboard" xml:space="preserve">
+    <value>Note vers presse-papiers</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_The_note_has_been_copied_to_the_clipboard" xml:space="preserve">
+    <value>La note a été copiée dans le presse-papiers</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Invalid_URL" xml:space="preserve">
+    <value>URL non valide</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Perhaps_are_you_missing_the_protocol_name___http_____for_example___" xml:space="preserve">
+    <value>Peut-être avez-vous oublié le nom du protocole (par exemple « http:// ») ?</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_More_time" xml:space="preserve">
+    <value>Plus de temps</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_You_ve_got__0__seconds_more_" xml:space="preserve">
+    <value>Vous avez {0} secondes de plus.</value>
+  </data>
+  <data name="GeneratePwViewModel_generated_click_to_generate_" xml:space="preserve">
+    <value>Cliquez pour générer !</value>
+  </data>
+  <data name="GeneratePwViewModel_GeneratePwViewModel_Copy_to_clipboard" xml:space="preserve">
+    <value>Copier</value>
+  </data>
+  <data name="GeneratePwViewModel_GeneratePwViewModel_Generated_password_copied_to_the_clipboard" xml:space="preserve">
+    <value>Mot de passe copié dans le presse-papiers</value>
+  </data>
+  <data name="GeneratePwViewModel_IncomingCommand_My_Stash_generated_password" xml:space="preserve">
+    <value>Mot de passé généré par MyStash</value>
+  </data>
+  <data name="MainViewModel_checkLog_Database_Path" xml:space="preserve">
+    <value>Chemin d’accès à la base de données</value>
+    <comment>info for clipboard seems not use by the os</comment>
+  </data>
+  <data name="SetPwViewModel_SetPwViewModel_Your_new_password___0___has_been_recorded__Don_t_forget_it__" xml:space="preserve">
+    <value>Votre nouveau mot de passe « {0} » a été enregistré. Ne l’oubliez pas !</value>
+  </data>
+  <data name="SetPwViewModel_SetPwViewModel_Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Password_can_t_be_empty_" xml:space="preserve">
+    <value>Le mot de passe ne peut pas être vide.</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Invalid_character_s__in_password_" xml:space="preserve">
+    <value>Caractères non valides dans mot de passe.</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Password_and_control_don_t_match__" xml:space="preserve">
+    <value>Les 2 saisies ne correspondent pas !</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_" xml:space="preserve">
+    <value>Longueur de mot de passe doit être &gt;= 4</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_20" xml:space="preserve">
+    <value>Longueur de mot de passe doit être &lt;= 20 caractères</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Only_one_single_character_is_used" xml:space="preserve">
+    <value>Un seul caractère est utilisé</value>
+  </data>
+  <data name="ViewCheckPw_Title" xml:space="preserve">
+    <value>Analyseur</value>
+  </data>
+  <data name="ViewCheckPw_Bonus" xml:space="preserve">
+    <value>Prime</value>
+  </data>
+  <data name="ViewCheckPw_Malus" xml:space="preserve">
+    <value>Malus</value>
+  </data>
+  <data name="ViewCheckPw_Strength" xml:space="preserve">
+    <value>Force</value>
+  </data>
+  <data name="ViewDetail_NameOrURL" xml:space="preserve">
+    <value>Nom/Url</value>
+  </data>
+  <data name="ViewDetail_Password" xml:space="preserve">
+    <value>Mot de p.</value>
+  </data>
+  <data name="ViewDetail_Title" xml:space="preserve">
+    <value>Détail</value>
+  </data>
+  <data name="VMDetail_CreatedOn" xml:space="preserve">
+    <value>Créé le</value>
+  </data>
+  <data name="VMDetail_ModifiedOn" xml:space="preserve">
+    <value>Modifié le</value>
+  </data>
+  <data name="VewSetPW_Warning" xml:space="preserve">
+    <value>N’oubliez pas votre mot de passe ! Nous n'avons pas de moyen pour vous aider en cas d'oubli...</value>
+  </data>
+  <data name="ViewDetail_CheckPw" xml:space="preserve">
+    <value>Vérifier MdP</value>
+  </data>
+  <data name="ViewGeneratePW_Generate" xml:space="preserve">
+    <value>Générer</value>
+  </data>
+  <data name="ViewGeneratePW_Length" xml:space="preserve">
+    <value>Longueur</value>
+  </data>
+  <data name="ViewGeneratePW_Parameters" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="ViewGeneratePW_Symbols" xml:space="preserve">
+    <value>Symboles</value>
+  </data>
+  <data name="ViewGeneratePW_Title" xml:space="preserve">
+    <value>Générateur</value>
+  </data>
+  <data name="ViewMainList_AllPlural" xml:space="preserve">
+    <value>Tout</value>
+  </data>
+  <data name="ViewMainList_LoadingData" xml:space="preserve">
+    <value>Chargement ...</value>
+  </data>
+  <data name="ViewMainList_Logins" xml:space="preserve">
+    <value>Logins</value>
+  </data>
+  <data name="ViewMainList_MiscPlural" xml:space="preserve">
+    <value>Divers</value>
+  </data>
+  <data name="ViewMainList_Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="ViewMainList_Search" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="ViewMainList_Tab_All_Title" xml:space="preserve">
+    <value>Tout</value>
+  </data>
+  <data name="ViewMainList_Title" xml:space="preserve">
+    <value>Données</value>
+  </data>
+  <data name="ViewMain_Title" xml:space="preserve">
+    <value>Veuillez entrer votre code</value>
+  </data>
+  <data name="ViewSetPW_AllowedChars" xml:space="preserve">
+    <value>Caractères autorisés : '0'..' 9' 'A'..' F'</value>
+  </data>
+  <data name="ViewSetPW_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="ViewSetPW_NewPW" xml:space="preserve">
+    <value>Nouveau MdP</value>
+  </data>
+  <data name="ViewSetPW_NewPWControl" xml:space="preserve">
+    <value>Mdp Contrôle</value>
+  </data>
+  <data name="ViewSetPW_NewPWControlHint" xml:space="preserve">
+    <value>Tapez-le à nouveau ici</value>
+  </data>
+  <data name="ViewSetPW_NewPWHint" xml:space="preserve">
+    <value>Tapez votre mot de passe</value>
+  </data>
+  <data name="ViewSetPW_Title" xml:space="preserve">
+    <value>Nouveau MdP</value>
+  </data>
+  <data name="ViewMainList_ChangePassword" xml:space="preserve">
+    <value>Changer MdP</value>
+  </data>
+  <data name="ViewMainList_LockScreen" xml:space="preserve">
+    <value>Verrouiller</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_Default" xml:space="preserve">
+    <value>Par Défaut</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_English" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_German" xml:space="preserve">
+    <value>Allemand</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_Italian" xml:space="preserve">
+    <value>Italien</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_Russian" xml:space="preserve">
+    <value>Russe</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_None" xml:space="preserve">
+    <value>Non traduit</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Novice" xml:space="preserve">
+    <value>novice</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Beginner" xml:space="preserve">
+    <value>Facile</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Connoisseur" xml:space="preserve">
+    <value>Connaisseur</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Elitist" xml:space="preserve">
+    <value>Élitiste</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Expert" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Master" xml:space="preserve">
+    <value>Maître</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Alien" xml:space="preserve">
+    <value>Alien</value>
+  </data>
+  <data name="ViewGeneratePW_OriginalWord" xml:space="preserve">
+    <value>Mot de p. à encoder</value>
+  </data>
+  <data name="ViewGeneratePW_LeetModeSwitch" xml:space="preserve">
+    <value>Mode L33t (sinon aléatoire)</value>
+  </data>
+  <data name="ViewGeneratePW_LeetLevel" xml:space="preserve">
+    <value>Niveau de brouillage</value>
+  </data>
+  <data name="EditView_Title" xml:space="preserve">
+    <value>Titre</value>
+  </data>
+  <data name="DialogService_ShowMessage_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="ViewEdit_DeleteButton" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="ViewEdit_NoteSection" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="ViewEdit_TitleCreate" xml:space="preserve">
+    <value>Nouvelle fiche</value>
+  </data>
+  <data name="ViewEdit_TitleModify" xml:space="preserve">
+    <value>Modification</value>
+  </data>
+  <data name="ViewGeneratePW_BackButton" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Action_canceled" xml:space="preserve">
+    <value>Action annulée</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_have_not_been_modified" xml:space="preserve">
+    <value>Les données n’ont PAS été modifiées</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_saved" xml:space="preserve">
+    <value>Données enregistrées</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_has_been_saved" xml:space="preserve">
+    <value>Les données ont été enregistrées</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Can_t_save_data" xml:space="preserve">
+    <value>Erreur de données</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_have_NOT_been_saved_" xml:space="preserve">
+    <value>Les données n’ont PAS été enregistrées.</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_error" xml:space="preserve">
+    <value>Erreur de données</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Delete_data__Are_you_sure__" xml:space="preserve">
+    <value>Supprimer la fiche. Êtes-vous sûr ?</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_deleted" xml:space="preserve">
+    <value>Fiche supprimée</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_has_been_deleted" xml:space="preserve">
+    <value>La fiche a été supprimée</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Can_t_delete_data" xml:space="preserve">
+    <value>Erreur de données</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_have_NOT_been_deleted_" xml:space="preserve">
+    <value>La fiche n'a PAS été supprimée</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_a_title" xml:space="preserve">
+    <value>Entrer un titre</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Title_is_mandatory" xml:space="preserve">
+    <value>Le titre est obligatoire</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Select_a_category" xml:space="preserve">
+    <value>Catégorie absente</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_A_category_must_be_selected" xml:space="preserve">
+    <value>Une catégorie doit être sélectionnée</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Login_is_empty" xml:space="preserve">
+    <value>Login est vide</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_a_Login_name" xml:space="preserve">
+    <value>Entrez un nom de connexion</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Password_is_empty" xml:space="preserve">
+    <value>Mot de passe vide</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_a_password" xml:space="preserve">
+    <value>Entrer le mot de passe</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Note_is_empty" xml:space="preserve">
+    <value>Note est vide</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_something_in_Note_field" xml:space="preserve">
+    <value>Saisissez la note</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Edit" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="SettingsViewModel_EncryptedData_Uncrypted_data_export_is_not_safe" xml:space="preserve">
+    <value>L'exportation de données non chiffrées n’est pas sûre ! Utilisez ce mode uniquement pour de bonnes raisons.</value>
+  </data>
+  <data name="SettingsViewModel_EncryptedData_Warning" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="SettingsViewModel_ClearDbBeforeImport" xml:space="preserve">
+    <value>Toutes les données seront supprimées avant l’importation. Si ce n’est pas ce que vous voulez désactivez cette option !</value>
+  </data>
+  <data name="SettingsViewModel_exportData_No_data" xml:space="preserve">
+    <value>Aucune donnée</value>
+  </data>
+  <data name="SettingsViewModel_exportData_No_data_to_export" xml:space="preserve">
+    <value>Aucune données à exporter</value>
+  </data>
+  <data name="SettingsViewModel_exportData_Export" xml:space="preserve">
+    <value>Exporter</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_exportData_Data_are_in_the_clipboard" xml:space="preserve">
+    <value>Les données sont dans le presse-papiers !</value>
+  </data>
+  <data name="SettingsViewModel_exportData_Error" xml:space="preserve">
+    <value>Erreur</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_exportData_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData_Import_succeed" xml:space="preserve">
+    <value>Importation réussie</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData_No_data_imported" xml:space="preserve">
+    <value>Aucune donnée importée.</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData_No_data_have_been_imported_" xml:space="preserve">
+    <value>Aucuns données n’ont été importées.</value>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData__0__sheets_have_been_imported_" xml:space="preserve">
+    <value>{0} feuilles ont été importées.</value>
+  </data>
+  <data name="SettingsViewModel_importSql_Not_implemented" xml:space="preserve">
+    <value>Non implémenté</value>
+  </data>
+  <data name="SettingsViewModel_importSql_No_SQL_import_in_this_version" xml:space="preserve">
+    <value>Aucune importation SQL dans cette version</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_Import_failed" xml:space="preserve">
+    <value>Échec de l'importation</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_csvImport_Import_aborted_bad_data_line__0_" xml:space="preserve">
+    <value>Importation avortée, mauvaises données ligne {0}</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_field__0__can_t_be_found" xml:space="preserve">
+    <value>champ {0} introuvable</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_Corrupted_data__1st_line_missing_" xml:space="preserve">
+    <value>Données non exploitables (1ère ligne manquante)</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_ID" xml:space="preserve">
+    <value>'{0}' n’est pas un ID valide</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_boolean" xml:space="preserve">
+    <value>'{0}' n’est pas une valeur booléenne valide</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_date_time" xml:space="preserve">
+    <value>'{0}' n’est pas une date/heure valide</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_Category" xml:space="preserve">
+    <value>'{0}' n’est pas une catégorie valide</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_algorithm_data_could_be_unreadable" xml:space="preserve">
+    <value>'{0}' n’est pas un algorithme valide. Les données pourraient être illisibles</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_field_position_" xml:space="preserve">
+    <value>'{0}' n’est pas une position de champ valide.</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_Ignored_data" xml:space="preserve">
+    <value>Données ignorées</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_csvImport__0__sheets_imported___1__ID_skipped___2__Title_skipped_" xml:space="preserve">
+    <value>{0} fiches importés. {1} ID ignoré(s). {2} titre(s) sauté(s).</value>
+  </data>
+  <data name="Consts_GeneratedBy_Generated_By_MyStash" xml:space="preserve">
+    <value>Généré par MyStash</value>
+  </data>
+  <data name="Consts_BadPercent_Bad_percentage" xml:space="preserve">
+    <value>Mauvais pourcentage</value>
+  </data>
+  <data name="Consts_EmptyFileName_File_name_is_empty" xml:space="preserve">
+    <value>Nom de fichier vide</value>
+  </data>
+  <data name="Consts_FileExists_Destination_file_already_exists" xml:space="preserve">
+    <value>Le fichier de destination existe déjà</value>
+  </data>
+  <data name="Consts_SourceEmpty_No_data_in_source_to_process" xml:space="preserve">
+    <value>Pas de données dans la source à traiter</value>
+  </data>
+  <data name="Consts_SourceIsNull_Source_is_null" xml:space="preserve">
+    <value>Source a la valeur null</value>
+  </data>
+  <data name="ExportBase_GetFieldValue_Can_t_read_property__0_" xml:space="preserve">
+    <value>Impossible de lire la propriété {0}</value>
+  </data>
+  <data name="ExportClipboardCsv_ExecuteOutput_no_shell_execute_in_PCL_version" xml:space="preserve">
+    <value>Pas d'exédution en mode PCL</value>
+  </data>
+  <data name="ExportClipboardCsv_CloseOutput_MyStash_CSV_data" xml:space="preserve">
+    <value>Données CSV MyStash</value>
+  </data>
+  <data name="ExportClipboardSql_ExecuteOutput_no_shell_execute_in_PCL_version" xml:space="preserve">
+    <value>Pas d'exédution en mode PCL</value>
+  </data>
+  <data name="ExportClipboardSql_CloseOutput_MyStash_SQL_data" xml:space="preserve">
+    <value>Données SQL MyStash</value>
+  </data>
+  <data name="ImportViewModel_Mode__0__Data_Import" xml:space="preserve">
+    <value>{0} données importées</value>
+    <comment>titre fenetre import (non visible car modale)</comment>
+  </data>
+  <data name="ViewImport_Explanation" xml:space="preserve">
+    <value>Coller ici le texte intégral d’une exportation précédente de MyStash. Puis cliquez sur Ok pour continuer.</value>
+  </data>
+  <data name="ViewSettings_AutoLock" xml:space="preserve">
+    <value>Verrouillage automatique</value>
+  </data>
+  <data name="ViewSettings_ClearDb" xml:space="preserve">
+    <value>Effacer les données avant l’importation</value>
+  </data>
+  <data name="ViewSettings_EncryptedExport" xml:space="preserve">
+    <value>Crypter les données exportées</value>
+  </data>
+  <data name="ViewSettings_Explain" xml:space="preserve">
+    <value>Par défaut les données exportées sont placées dans le presse-papiers</value>
+  </data>
+  <data name="ViewSettings_ExportCsv" xml:space="preserve">
+    <value>Exporter au format CSV</value>
+  </data>
+  <data name="ViewSettings_ExportSql" xml:space="preserve">
+    <value>Exporter vers SQL</value>
+  </data>
+  <data name="ViewSettings_Go" xml:space="preserve">
+    <value>Go !</value>
+  </data>
+  <data name="ViewSettings_ImportCsv" xml:space="preserve">
+    <value>Importer des données CSV</value>
+  </data>
+  <data name="ViewSettings_Language" xml:space="preserve">
+    <value>Langue de l'App</value>
+  </data>
+  <data name="ViewSettings_LockOnHidde" xml:space="preserve">
+    <value>Verrouillé quand caché</value>
+  </data>
+  <data name="ViewSettings_SearchEverywhere" xml:space="preserve">
+    <value>Rechercher partout</value>
+  </data>
+  <data name="ViewSettings_SearchInNotes" xml:space="preserve">
+    <value>Rechercher dans les notes</value>
+  </data>
+  <data name="ViewSettings_Section2" xml:space="preserve">
+    <value>Options de recherche</value>
+  </data>
+  <data name="ViewSettings_Section3" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="ViewSettings_Section4" xml:space="preserve">
+    <value>Divers</value>
+  </data>
+  <data name="ViewSettings_Section5" xml:space="preserve">
+    <value>Exportation de données</value>
+  </data>
+  <data name="ViewSettings_Section6" xml:space="preserve">
+    <value>Importation de données</value>
+  </data>
+  <data name="ViewSettings_Share" xml:space="preserve">
+    <value>Partager les données</value>
+  </data>
+  <data name="ViewSettings_Shuffle" xml:space="preserve">
+    <value>Mélanger les touches (écran de connexion)</value>
+  </data>
+  <data name="ViewSettings_SkipId" xml:space="preserve">
+    <value>Skip ID existants</value>
+  </data>
+  <data name="ViewSettings_SkipTitles" xml:space="preserve">
+    <value>Sauter les titres existants</value>
+  </data>
+  <data name="ViewStteings_Section1" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="ViewStteings_Title" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="VSSettings_ShowDates" xml:space="preserve">
+    <value>Afficher la date dans les grilles</value>
+  </data>
+  <data name="VSSettings_ShowLines" xml:space="preserve">
+    <value>Afficher les lignes dans les grilles</value>
+  </data>
+</root>

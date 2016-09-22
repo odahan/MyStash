@@ -1,0 +1,126 @@
+
+- relier form des paramètres au soft (menu)
+
+-- se rappeler du dernier onglet et se repositionner dessus par défaut
+-- lever l'autolock sur option more time car on doit pouvoir aller et revenir sinon le copy devient chiant
+
+--- Appeler Locator.LoginSwitch.ResetTimeout(); dans toutes les interactions users
+
+- voir si le timeout et tous ses timers créés ne pose pas de pb sinon utiliser le même timer de bout en bout ?
+- maintenance (copie db path, sauvegarde db...)
+- uwp 720p si rotation le picker ne se déclenche pas...
+
+- settings ne pas oublier prise en charge de Utils.GlobalMessages.SettingsChanged
+
+-*- si la db est copiée sur une autre app, l'ouverture refusée si pw user != current
+	ce qui coupe l'effet backdoor. Seul mystash pour décrypter la db, mais elle peut le
+	faire d'un fichier d'un autre user. le stockage user pw interdit cela.
+	C'est plus simple puisque la db peut être copiée sans être recryptée mais n'est
+	pas utilisable sans le bon mot de passe user. De plus cela laisse malgré tout la porte
+	ouverte au sauvetage des données d'un utilisateur qui aurait perdu son mot de passe.
+	En version finale il faudra implémenter la cryptoraphie correctement (pour l'instant c'est minimal)
+
+-*- Amélioration : backup/recup direct du fichier database
+
+
+*** localisation : https://developer.xamarin.com/guides/xamarin-forms/advanced/localization/
+    voir aussi utilisation de MAT éventuellement : https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/
+
+
+** toasts ne passe pas en nuget, installé à la main depuis les sources dans chaque projet
+** picker sous android spell checking très laid sur le mot affiché, obligé de passer par du natif pour le virer et pas envie de le faire.
+** Border du searchbar sous ios pas très beau, impossible à changer depuis XForms. idem ci-dessus.
+
+** TapImage sur setpw marche plus d'un seul coup après des centaines de run... remplacé par un bouton.
+** bug de binding sur les listes principales quand on applique le filtre pro plusieurs fois.
+  En changeant les setter Set(ref..) en manuel (truc=value; raiseprop..) et en passant la valeur
+  à null avant ça a l'air de marcher. Y'a des trucs vraiment louches.
+** bug ésotérique il y a un endroit où en changeant les relaycommand en command XForms ça passe sinon
+  plantage exotique. Pfuiii c'est de la magie noire ! Du coup utilisation systématique du Command partout.
+** Nécessité de Mvvm Light ? command bybye, viewmodellocator=code perso, ViewModeBase et Messagerie ? ça justifie ?
+** Icon du tabbedpage pour ios marche si on place images dans le projet natif. pour éviter file not found et bien
+   que pas utilisé par uwp et droid j'ai fait idem pour chaque plateforme. pour ios, 30x30, puis 60x60 @2x et 90x90 @3x (erreur ça devrait être 124).
+   Idem toolbar. REGLE : image en PCL c'est ok, Icon, mettre dans projet natif
+
+
+* Localisation faites avec MAT
+
+
+idées en natif pour copie de fichier :
+
+IFile file = await folder.CreateFileAsync("myfile.abc", CreationCollisionOption.ReplaceExisting);
+byte[] buffer = new byte[100];
+using (System.IO.Stream stream = await file.OpenAsync(FileAccess.ReadAndWrite))
+{
+    stream.Write(buffer, 0, 100);
+}
+
+--- share ios ---
+UIActivityViewController activityVC = new UIActivityViewController (
+	new NSObject[] { new NSString("PDF Document"), NSUrl.FromFilename(datapath)}, null);
+PresentViewController (activityVC, true, null);
+
+--- share droid --- code java
+Intent shareIntent = new Intent();
+shareIntent.setAction(Intent.ACTION_SEND);
+shareIntent.putExtra(Intent.EXTRA_STREAM, uriToImage);
+shareIntent.setType("image/jpeg");
+startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
+
+image/jpeg => */* pour tout type
+voir les fileprovider pour passer une url secure : 
+https://developer.android.com/reference/android/support/v4/content/FileProvider.html
+
+
+autre ex avec copy temp sur sdcard xamarin
+public void Share (string title, string content)
+{
+    if (string.IsNullOrEmpty (title) || string.IsNullOrEmpty (content))
+                return;
+
+    Bitmap b = BitmapFactory.DecodeResource(Resources,Resource.Drawable.icon_120);
+
+    var tempFilename = "test.png";
+    var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+    var filePath = System.IO.Path.Combine(sdCardPath, tempFilename);
+    using (var os = new FileStream(filePath, FileMode.Create))
+    {
+        b.Compress(Bitmap.CompressFormat.Png, 100, os);
+    }
+    b.Dispose ();
+
+    var imageUri = Android.Net.Uri.Parse ($"file://{sdCardPath}/{tempFilename}");
+    var sharingIntent = new Intent ();
+    sharingIntent.SetAction (Intent.ActionSend);
+    sharingIntent.SetType ("image/*");
+    sharingIntent.PutExtra (Intent.ExtraText, content);
+    sharingIntent.PutExtra (Intent.ExtraStream, imageUri);
+    sharingIntent.AddFlags (ActivityFlags.GrantReadUriPermission);
+    StartActivity (Intent.CreateChooser (sharingIntent, title));
+}
+Also add ReadExternalStorage and WriteExternalStorage permissions to your app.
+
+autre ex avec astuce xamarin:
+http://stacktips.com/tutorials/xamarin/shareactionprovider-example-in-xamarin-android
+
+--- share uwp ---
+
+lacement : Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI();
+
+guetter les appels : Windows.ApplicationModel.DataTransfer.DataTransferManager.GetForCurrentView().DataRequested += MainPage_DataRequested;
+
+gérer : void MainPage_DataRequested(Windows.ApplicationModel.DataTransfer.DataTransferManager sender, Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs args)
+{
+   if(!string.IsNullOrEmpty(ContentText.Text))
+   {
+      args.Request.Data.SetText(ContentText.Text);
+      args.Request.Data.Properties.Title = Windows.ApplicationModel.Package.Current.DisplayName;
+   }
+   else
+   {
+      args.Request.FailWithDisplayText("Nothing to share");
+   }
+}
+
+voir app example :
+https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ShareSource

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
+             xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
+             x:Class="MyStash.Views.MainView"
+             Title="{helpers:Translate ViewMain_Title}">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="controls:TapImage">
+        <Setter Property="WidthRequest" Value="70"/>
+        <Setter Property="HeightRequest" Value="70"/>
+        <Setter Property="Source"  Value="{DynamicResource RoundedButton}"/>     
+      
+      </Style>
+      <Style TargetType="controls:AnimatedTapLabel">
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="Margin" Value="0,-5,0,0" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid RowSpacing="0" ColumnSpacing="0" Padding="10" BackgroundColor="White">
+
+    <Image Source="{helpers:ImageResource MyStash.Images.globalbackground.jpg}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    
+    <Grid VerticalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="5*"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="5*"/>
+      </Grid.RowDefinitions>
+
+      <Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <controls:TapImage ClassId="+0" Grid.Column="0" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L0}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="0" ClassId="*0" x:Name="L0" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L0}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+1" Grid.Column="1" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L1}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="1" ClassId="*1" x:Name="L1" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L1}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+2" Grid.Column="2" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L2}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="2" ClassId="*2" x:Name="L2" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L2}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+3" Grid.Column="3" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L3}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="3" ClassId="*3" x:Name="L3" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L3}, Path=Text}" Animate="False"/>
+      </Grid>
+
+      <Grid Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <controls:TapImage ClassId="+4" Grid.Column="0" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L4}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="0" ClassId="*4" x:Name="L4" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L4}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+5" Grid.Column="1" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L5}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="1" ClassId="*5" x:Name="L5" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L5}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+6" Grid.Column="2" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L6}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="2" ClassId="*6" x:Name="L6" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L6}, Path=Text}" Animate="False"/>
+      </Grid>
+
+      <Grid Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <controls:TapImage ClassId="+7" Grid.Column="0" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L7}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="0" ClassId="*7" x:Name="L7" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L7}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+8" Grid.Column="1" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L8}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="1" ClassId="*8" x:Name="L8" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L8}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+9" Grid.Column="2" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L9}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="2" ClassId="*9" x:Name="L9" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L9}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+10" Grid.Column="3" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L10}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="3" ClassId="*10" x:Name="L10" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L10}, Path=Text}" Animate="False"/>
+      </Grid>
+
+      <Grid Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <controls:TapImage ClassId="+11" Grid.Column="0" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L11}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="0" ClassId="*11" x:Name="L11" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L11}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+12" Grid.Column="1" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L12}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="1" ClassId="*12" x:Name="L12" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L12}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+13" Grid.Column="2" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L13}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="2" ClassId="*13" x:Name="L13" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L13}, Path=Text}" Animate="False"/>
+      </Grid>
+
+      <Grid Grid.Row="5" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <controls:TapImage ClassId="+14" Grid.Column="0" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L14}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="0" ClassId="*14" x:Name="L14" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L14}, Path=Text}" Animate="False"/>
+        <controls:TapImage ClassId="+15" Grid.Column="1" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L15}, Path=Text}" Animate="False"/>
+        <controls:AnimatedTapLabel Grid.Column="1" ClassId="*15" x:Name="L15" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L15}, Path=Text}" Animate="False"/>
+      </Grid>
+
+
+    </Grid>
+
+
+   
+  </Grid>
+
+</ContentPage>

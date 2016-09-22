@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>MyStash</value>
+    <comment>Application title</comment>
+  </data>
+  <data name="EventToCommandBehavior_CantRegisterEvent" xml:space="preserve">
+    <value>EventToCommandBehavior: Не удается зарегистрировать событие «{0}».</value>
+  </data>
+  <data name="EventToCommandBehavior_CantDeRegisterEvent" xml:space="preserve">
+    <value>EventToCommandBehavior: Не удается отменить регистрацию события «{0}».</value>
+  </data>
+  <data name="PasswordChecker_PasswordStrength_Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Empty" xml:space="preserve">
+    <value>Пусто</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Rejected" xml:space="preserve">
+    <value>Отклонен</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Password_Length" xml:space="preserve">
+    <value>Длина пароля</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Uppercase_Letters" xml:space="preserve">
+    <value>Прописные буквы</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Lowercase_Letters" xml:space="preserve">
+    <value>Строчные буквы</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Numbers" xml:space="preserve">
+    <value>Числа</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Symbols" xml:space="preserve">
+    <value>Символы</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Middle_Numbers_or_Symbols" xml:space="preserve">
+    <value>Числа или символы в середине</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Length_8" xml:space="preserve">
+    <value>Требование. Длина&gt;8</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Uppercase" xml:space="preserve">
+    <value>Требование. Прописные буквы</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Lowercase" xml:space="preserve">
+    <value>Требование. Нижний регистр</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Digit" xml:space="preserve">
+    <value>Требование. Цифра</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Requirement__Symbol" xml:space="preserve">
+    <value>Требование. Символ</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails__3_or_more_requirments" xml:space="preserve">
+    <value>3 или больше требования</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Less_than_3_requirments" xml:space="preserve">
+    <value>Меньше чем 3 требования</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Same_symbol" xml:space="preserve">
+    <value>Тот же символ</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Letters_only" xml:space="preserve">
+    <value>Только буквы</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Numbers_only" xml:space="preserve">
+    <value>Только цифры</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Repeat_Characters__Case_Insensitive_" xml:space="preserve">
+    <value>повторные персонажи</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Consecutive_Uppercase_Letters" xml:space="preserve">
+    <value>Последовательные прописные буквы</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Consecutive_Lowercase_Letters" xml:space="preserve">
+    <value>последовательных строчных букв</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Consecutive_Numbers" xml:space="preserve">
+    <value>цифры Серия</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Sequential_Letters__3__" xml:space="preserve">
+    <value>Последовательных букв (3+)</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Sequential_Numbers__3__" xml:space="preserve">
+    <value>Последовательные цифры (3+)</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Very_Weak" xml:space="preserve">
+    <value>Очень слабый</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Weak" xml:space="preserve">
+    <value>низкая</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Good" xml:space="preserve">
+    <value>Хорошая</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Strong" xml:space="preserve">
+    <value>могущественный</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Very_Strong" xml:space="preserve">
+    <value>Очень сильный</value>
+  </data>
+  <data name="PasswordChecker_CheckPasswordWithDetails_Ultra_Strong" xml:space="preserve">
+    <value>Ультра сильный</value>
+  </data>
+  <data name="PasswordChecker_createMemoryTable_Score" xml:space="preserve">
+    <value>счет в игре</value>
+  </data>
+  <data name="StringExtensions_Contains_substring_cannot_be_null_" xml:space="preserve">
+    <value>подстрока не может иметь значение null.</value>
+  </data>
+  <data name="StringExtensions_Contains_comp_is_not_a_member_of_StringComparison" xml:space="preserve">
+    <value>комп не является членом StringComparison</value>
+  </data>
+  <data name="InfoSheet_ProFilterDictionary_All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="InfoSheet_ProFilterDictionary_Personal" xml:space="preserve">
+    <value>личный</value>
+  </data>
+  <data name="InfoSheet_ProFilterDictionary_Professional" xml:space="preserve">
+    <value>Профессиональный</value>
+  </data>
+  <data name="InfoSheet_CategoryDictionary_Login" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="InfoSheet_CategoryDictionary_Misc" xml:space="preserve">
+    <value>Прочее</value>
+  </data>
+  <data name="InfoSheet_CategoryDictionary_Note" xml:space="preserve">
+    <value>Заметка</value>
+  </data>
+  <data name="DialogService_ShowMessage_Ok" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="NavigationService_getPage_Page_inconnue" xml:space="preserve">
+    <value>Страница inconnue: {0}. NavigationService.Configure-t-il été oublié?</value>
+  </data>
+  <data name="NavigationService_getPage_Page_inconnueConfigure" xml:space="preserve">
+    <value>Страница inconnue: {0}. NavigationService.Configure-t-il été oublié?</value>
+  </data>
+  <data name="NavigationService_getPage_Aucun_constructeur_approprié_trouvé" xml:space="preserve">
+    <value>Aucun constructeur получил trouvé налить {0}</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Login_copied_to_clipboard" xml:space="preserve">
+    <value>скопированы в буфер обмена</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_The_login_has_been_copied_to_the_clipboard" xml:space="preserve">
+    <value>Вход был скопирован в буфер обмена</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Password_copied_to_clipboard" xml:space="preserve">
+    <value>скопированы в буфер обмена</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_The_password_has_been_copied_to_the_clipboard" xml:space="preserve">
+    <value>Пароль был скопирован в буфер обмена</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Note_copied_to_clipboard" xml:space="preserve">
+    <value>скопированы в буфер обмена</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_The_note_has_been_copied_to_the_clipboard" xml:space="preserve">
+    <value>Записка была скопирована в буфер обмена</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Invalid_URL" xml:space="preserve">
+    <value>Недопустимый URL-адрес</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Perhaps_are_you_missing_the_protocol_name___http_____for_example___" xml:space="preserve">
+    <value>Возможно вам не хватает имя протокола (например «http://»)?</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_More_time" xml:space="preserve">
+    <value>Продлить</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_You_ve_got__0__seconds_more_" xml:space="preserve">
+    <value>У вас есть {0} секунд больше.</value>
+  </data>
+  <data name="GeneratePwViewModel_generated_click_to_generate_" xml:space="preserve">
+    <value>Нажмите, чтобы создать!</value>
+  </data>
+  <data name="GeneratePwViewModel_GeneratePwViewModel_Copy_to_clipboard" xml:space="preserve">
+    <value>Копировать в буфер обмена</value>
+  </data>
+  <data name="GeneratePwViewModel_GeneratePwViewModel_Generated_password_copied_to_the_clipboard" xml:space="preserve">
+    <value>Сгенерированный пароль, скопированы в буфер обмена</value>
+  </data>
+  <data name="GeneratePwViewModel_IncomingCommand_My_Stash_generated_password" xml:space="preserve">
+    <value>пароль генерируется</value>
+  </data>
+  <data name="MainViewModel_checkLog_Database_Path" xml:space="preserve">
+    <value>Путь к базе данных</value>
+    <comment>info for clipboard seems not use by the os</comment>
+  </data>
+  <data name="SetPwViewModel_SetPwViewModel_Your_new_password___0___has_been_recorded__Don_t_forget_it__" xml:space="preserve">
+    <value>Ваш новый пароль «{0}» был записан. Не забудьте его!</value>
+  </data>
+  <data name="SetPwViewModel_SetPwViewModel_Confirmation" xml:space="preserve">
+    <value>Подтверждение</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Password_can_t_be_empty_" xml:space="preserve">
+    <value>Пароль не может быть пустым.</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Invalid_character_s__in_password_" xml:space="preserve">
+    <value>Недопустимые знаки в поле пароль.</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Password_and_control_don_t_match__" xml:space="preserve">
+    <value>Оба пароля отличаются!</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_" xml:space="preserve">
+    <value>Длина пароля должна быть &gt;= 4</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_20" xml:space="preserve">
+    <value>Длина пароля должна быть &lt;= 20 символов</value>
+  </data>
+  <data name="SetPwViewModel_checkValidity_Only_one_single_character_is_used" xml:space="preserve">
+    <value>Один символ используется</value>
+  </data>
+  <data name="ViewCheckPw_Bonus" xml:space="preserve">
+    <value>Премия</value>
+  </data>
+  <data name="ViewCheckPw_Malus" xml:space="preserve">
+    <value>малус</value>
+  </data>
+  <data name="ViewCheckPw_Strength" xml:space="preserve">
+    <value>сила</value>
+  </data>
+  <data name="ViewCheckPw_Title" xml:space="preserve">
+    <value>Анализ пароль</value>
+  </data>
+  <data name="ViewDetail_NameOrURL" xml:space="preserve">
+    <value>Имя/Url</value>
+  </data>
+  <data name="ViewDetail_Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="ViewDetail_Title" xml:space="preserve">
+    <value>Подробности</value>
+  </data>
+  <data name="VMDetail_CreatedOn" xml:space="preserve">
+    <value>Создано</value>
+  </data>
+  <data name="VMDetail_ModifiedOn" xml:space="preserve">
+    <value>изменения</value>
+  </data>
+  <data name="VewSetPW_Warning" xml:space="preserve">
+    <value>Не забывайте Ваш пароль! Существует нет бэкдор, и мы не имеют каких-либо магический трюк, чтобы помочь вам...</value>
+  </data>
+  <data name="ViewDetail_CheckPw" xml:space="preserve">
+    <value>Проверка PW</value>
+  </data>
+  <data name="ViewGeneratePW_Generate" xml:space="preserve">
+    <value>Сформировать</value>
+  </data>
+  <data name="ViewGeneratePW_Length" xml:space="preserve">
+    <value>Длина</value>
+  </data>
+  <data name="ViewGeneratePW_Parameters" xml:space="preserve">
+    <value>параметры</value>
+  </data>
+  <data name="ViewGeneratePW_Symbols" xml:space="preserve">
+    <value>Символы</value>
+  </data>
+  <data name="ViewGeneratePW_Title" xml:space="preserve">
+    <value>Генерация пароля</value>
+  </data>
+  <data name="ViewMainList_AllPlural" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="ViewMainList_LoadingData" xml:space="preserve">
+    <value>Подождите ...</value>
+  </data>
+  <data name="ViewMainList_Logins" xml:space="preserve">
+    <value>Имена входа</value>
+  </data>
+  <data name="ViewMainList_MiscPlural" xml:space="preserve">
+    <value>Прочее</value>
+  </data>
+  <data name="ViewMainList_Notes" xml:space="preserve">
+    <value>примечания</value>
+  </data>
+  <data name="ViewMainList_Search" xml:space="preserve">
+    <value>поиск</value>
+  </data>
+  <data name="ViewMainList_Tab_All_Title" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="ViewMainList_Title" xml:space="preserve">
+    <value>Данные</value>
+  </data>
+  <data name="ViewMain_Title" xml:space="preserve">
+    <value>введите ваш код</value>
+  </data>
+  <data name="ViewSetPW_AllowedChars" xml:space="preserve">
+    <value>Допустимые символы: '0'..' 9' 'A'..' F'</value>
+  </data>
+  <data name="ViewSetPW_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="ViewSetPW_NewPW" xml:space="preserve">
+    <value>Новый пароль</value>
+  </data>
+  <data name="ViewSetPW_NewPWControl" xml:space="preserve">
+    <value>Новый пароль контроля</value>
+  </data>
+  <data name="ViewSetPW_NewPWControlHint" xml:space="preserve">
+    <value>Введите его здесь еще раз</value>
+  </data>
+  <data name="ViewSetPW_NewPWHint" xml:space="preserve">
+    <value>Введите ваш пароль</value>
+  </data>
+  <data name="ViewSetPW_Title" xml:space="preserve">
+    <value>Установить новый пароль</value>
+  </data>
+  <data name="ViewMainList_ChangePassword" xml:space="preserve">
+    <value>Изменение пароль</value>
+  </data>
+  <data name="ViewMainList_LockScreen" xml:space="preserve">
+    <value>Блокировка</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_Default" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_English" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_French" xml:space="preserve">
+    <value>Французский</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_German" xml:space="preserve">
+    <value>Немецкий</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_Italian" xml:space="preserve">
+    <value>Итальянский</value>
+  </data>
+  <data name="AppSettings_CultureDictionary_Russian" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_None" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Novice" xml:space="preserve">
+    <value>Начинающий</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Beginner" xml:space="preserve">
+    <value>Начинающий</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Connoisseur" xml:space="preserve">
+    <value>Знаток</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Elitist" xml:space="preserve">
+    <value>Элитарный</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Expert" xml:space="preserve">
+    <value>Эксперт</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Master" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="LeetMaker_LeetStrengthStr_Alien" xml:space="preserve">
+    <value>Пришелец</value>
+  </data>
+  <data name="ViewGeneratePW_OriginalWord" xml:space="preserve">
+    <value>Пароль для кодирования</value>
+  </data>
+  <data name="ViewGeneratePW_LeetModeSwitch" xml:space="preserve">
+    <value>L33t режим (еще режиме Random)</value>
+  </data>
+  <data name="ViewGeneratePW_LeetLevel" xml:space="preserve">
+    <value>Уровень запутывания</value>
+  </data>
+  <data name="EditView_Title" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="DialogService_ShowMessage_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="ViewEdit_DeleteButton" xml:space="preserve">
+    <value>удалить</value>
+  </data>
+  <data name="ViewEdit_NoteSection" xml:space="preserve">
+    <value>Заметка</value>
+  </data>
+  <data name="ViewEdit_TitleCreate" xml:space="preserve">
+    <value>Новые данные</value>
+  </data>
+  <data name="ViewEdit_TitleModify" xml:space="preserve">
+    <value>Изменение данных</value>
+  </data>
+  <data name="ViewGeneratePW_BackButton" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Action_canceled" xml:space="preserve">
+    <value>Действие отменено</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_have_not_been_modified" xml:space="preserve">
+    <value>Данные не были изменены</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_saved" xml:space="preserve">
+    <value>Сохраненные данные</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_has_been_saved" xml:space="preserve">
+    <value>Сохраненные данные</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Can_t_save_data" xml:space="preserve">
+    <value>Не удается сохранить данные</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_have_NOT_been_saved_" xml:space="preserve">
+    <value>Данные не были сохранены.</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_error" xml:space="preserve">
+    <value>Ошибка в данных</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Delete_data__Are_you_sure__" xml:space="preserve">
+    <value>Удаление данных. Уверен?</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Confirmation" xml:space="preserve">
+    <value>Подтверждение</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_deleted" xml:space="preserve">
+    <value>Удаление данных</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_has_been_deleted" xml:space="preserve">
+    <value>Данные были удалены</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Can_t_delete_data" xml:space="preserve">
+    <value>Нельзя удалить данные</value>
+  </data>
+  <data name="EditViewModel_EditViewModel_Data_have_NOT_been_deleted_" xml:space="preserve">
+    <value>Данные не были удалены.</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_a_title" xml:space="preserve">
+    <value>Введите название</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Title_is_mandatory" xml:space="preserve">
+    <value>Название является обязательным</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Select_a_category" xml:space="preserve">
+    <value>Выберите категорию</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_A_category_must_be_selected" xml:space="preserve">
+    <value>Необходимо выбрать категорию</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Login_is_empty" xml:space="preserve">
+    <value>Имя входа является пустым</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_a_Login_name" xml:space="preserve">
+    <value>Введите имя входа</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Password_is_empty" xml:space="preserve">
+    <value>Пустой пароль</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_a_password" xml:space="preserve">
+    <value>Введите пароль</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Note_is_empty" xml:space="preserve">
+    <value>Примечание пусто</value>
+  </data>
+  <data name="EditViewModel_isSheetOkVerbose_Enter_something_in_Note_field" xml:space="preserve">
+    <value>В поле Примечание введите что-то</value>
+  </data>
+  <data name="DetailViewModel_DetailViewModel_Edit" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="SettingsViewModel_EncryptedData_Uncrypted_data_export_is_not_safe" xml:space="preserve">
+    <value>Экспорт данных Uncrypted не является безопасным! Этот режим используется только для хороших причин.</value>
+  </data>
+  <data name="SettingsViewModel_EncryptedData_Warning" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="SettingsViewModel_ClearDbBeforeImport" xml:space="preserve">
+    <value>Все данные будут удалены перед импортом. Если не уверен выключить этот параметр!</value>
+  </data>
+  <data name="SettingsViewModel_exportData_No_data" xml:space="preserve">
+    <value>Нет данных</value>
+  </data>
+  <data name="SettingsViewModel_exportData_No_data_to_export" xml:space="preserve">
+    <value>Нет данных для экспорта</value>
+  </data>
+  <data name="SettingsViewModel_exportData_Export" xml:space="preserve">
+    <value>Экспорт</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_exportData_Data_are_in_the_clipboard" xml:space="preserve">
+    <value>Данные находятся в буфере обмена!</value>
+  </data>
+  <data name="SettingsViewModel_exportData_Error" xml:space="preserve">
+    <value>Ошибка</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_exportData_OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData_Import_succeed" xml:space="preserve">
+    <value>Импорт выполнен успешно</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData_No_data_imported" xml:space="preserve">
+    <value>Данные не импортированы</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData_No_data_have_been_imported_" xml:space="preserve">
+    <value>Данные не были импортированы.</value>
+  </data>
+  <data name="SettingsViewModel_importCSVWithData__0__sheets_have_been_imported_" xml:space="preserve">
+    <value>{0} листы были импортированы.</value>
+  </data>
+  <data name="SettingsViewModel_importSql_Not_implemented" xml:space="preserve">
+    <value>Не реализовано</value>
+  </data>
+  <data name="SettingsViewModel_importSql_No_SQL_import_in_this_version" xml:space="preserve">
+    <value>Не SQL импорта в этой версии</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_Import_failed" xml:space="preserve">
+    <value>Ошибка при импорте</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_csvImport_Import_aborted_bad_data_line__0_" xml:space="preserve">
+    <value>Импорт прерван плохих данных строки {0}</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_field__0__can_t_be_found" xml:space="preserve">
+    <value>не удается найти поле {0}</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_Corrupted_data__1st_line_missing_" xml:space="preserve">
+    <value>Поврежденные данные (1-й линии отсутствует)</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_ID" xml:space="preserve">
+    <value>«{0}» не является допустимым идентификатором</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_boolean" xml:space="preserve">
+    <value>«{0}» не является допустимым логическим значением</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_date_time" xml:space="preserve">
+    <value>«{0}» не является допустимым Дата/время</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_Category" xml:space="preserve">
+    <value>«{0}» не является допустимым Категория</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_algorithm_data_could_be_unreadable" xml:space="preserve">
+    <value>«{0}» не является допустимым алгоритм данные может быть нечитаемым</value>
+  </data>
+  <data name="SettingsViewModel_csvImport___0___is_not_a_valid_field_position_" xml:space="preserve">
+    <value>«{0}» не является допустимым поле позиция.</value>
+  </data>
+  <data name="SettingsViewModel_csvImport_Ignored_data" xml:space="preserve">
+    <value>Пропущенные данные</value>
+    <comment>titre</comment>
+  </data>
+  <data name="SettingsViewModel_csvImport__0__sheets_imported___1__ID_skipped___2__Title_skipped_" xml:space="preserve">
+    <value>импортированы {0} листы. {1} ID пропущено. {2} название пропущен.</value>
+  </data>
+  <data name="Consts_GeneratedBy_Generated_By_MyStash" xml:space="preserve">
+    <value>Порожденных MyStash</value>
+  </data>
+  <data name="Consts_BadPercent_Bad_percentage" xml:space="preserve">
+    <value>Плохой процент</value>
+  </data>
+  <data name="Consts_EmptyFileName_File_name_is_empty" xml:space="preserve">
+    <value>Пустое имя файла</value>
+  </data>
+  <data name="Consts_FileExists_Destination_file_already_exists" xml:space="preserve">
+    <value>Файл назначения уже существует</value>
+  </data>
+  <data name="Consts_SourceEmpty_No_data_in_source_to_process" xml:space="preserve">
+    <value>Нет данных в источник для обработки</value>
+  </data>
+  <data name="Consts_SourceIsNull_Source_is_null" xml:space="preserve">
+    <value>Источник имеет значение null</value>
+  </data>
+  <data name="ExportBase_GetFieldValue_Can_t_read_property__0_" xml:space="preserve">
+    <value>Не удается прочитать свойство {0}</value>
+  </data>
+  <data name="ExportClipboardCsv_ExecuteOutput_no_shell_execute_in_PCL_version" xml:space="preserve">
+    <value>оболочки выполняются в версии PCL</value>
+  </data>
+  <data name="ExportClipboardCsv_CloseOutput_MyStash_CSV_data" xml:space="preserve">
+    <value>Данные MyStash CSV</value>
+  </data>
+  <data name="ExportClipboardSql_ExecuteOutput_no_shell_execute_in_PCL_version" xml:space="preserve">
+    <value>оболочки выполняются в версии PCL</value>
+  </data>
+  <data name="ExportClipboardSql_CloseOutput_MyStash_SQL_data" xml:space="preserve">
+    <value>Данные MyStash SQL</value>
+  </data>
+  <data name="ImportViewModel_Mode__0__Data_Import" xml:space="preserve">
+    <value>Импорт данных {0}</value>
+    <comment>titre fenetre import (non visible car modale)</comment>
+  </data>
+  <data name="ViewImport_Explanation" xml:space="preserve">
+    <value>Вставьте здесь полный текст предыдущего экспорта мой тайник. Затем нажмите кнопку ОК, чтобы продолжить</value>
+  </data>
+  <data name="ViewSettings_AutoLock" xml:space="preserve">
+    <value>Автоматическая блокировка</value>
+  </data>
+  <data name="ViewSettings_ClearDb" xml:space="preserve">
+    <value>Очистка данных перед импортом</value>
+  </data>
+  <data name="ViewSettings_EncryptedExport" xml:space="preserve">
+    <value>Шифровать экспортируемых данных</value>
+  </data>
+  <data name="ViewSettings_Explain" xml:space="preserve">
+    <value>По умолчанию экспортированные данные помещаются в буфер обмена</value>
+  </data>
+  <data name="ViewSettings_ExportCsv" xml:space="preserve">
+    <value>Экспорт в CSV</value>
+  </data>
+  <data name="ViewSettings_ExportSql" xml:space="preserve">
+    <value>Экспорт в SQL</value>
+  </data>
+  <data name="ViewSettings_Go" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="ViewSettings_ImportCsv" xml:space="preserve">
+    <value>Импортировать данные CSV</value>
+  </data>
+  <data name="ViewSettings_Language" xml:space="preserve">
+    <value>Язык приложений</value>
+  </data>
+  <data name="ViewSettings_LockOnHidde" xml:space="preserve">
+    <value>Блокировка на скрыт</value>
+  </data>
+  <data name="ViewSettings_SearchEverywhere" xml:space="preserve">
+    <value>Поиск evrywhere</value>
+  </data>
+  <data name="ViewSettings_SearchInNotes" xml:space="preserve">
+    <value>Поиск в заметках</value>
+  </data>
+  <data name="ViewSettings_Section2" xml:space="preserve">
+    <value>Параметры поиска</value>
+  </data>
+  <data name="ViewSettings_Section3" xml:space="preserve">
+    <value>Безопасность</value>
+  </data>
+  <data name="ViewSettings_Section4" xml:space="preserve">
+    <value>Прочее</value>
+  </data>
+  <data name="ViewSettings_Section5" xml:space="preserve">
+    <value>Экспорт данных</value>
+  </data>
+  <data name="ViewSettings_Section6" xml:space="preserve">
+    <value>Импорт данных</value>
+  </data>
+  <data name="ViewSettings_Share" xml:space="preserve">
+    <value>Совместное использование данных</value>
+  </data>
+  <data name="ViewSettings_Shuffle" xml:space="preserve">
+    <value>Перемешивание ключей (Логин экрана)</value>
+  </data>
+  <data name="ViewSettings_SkipId" xml:space="preserve">
+    <value>Пропуск существующих идентификаторов</value>
+  </data>
+  <data name="ViewSettings_SkipTitles" xml:space="preserve">
+    <value>Пропустить существующие титулы</value>
+  </data>
+  <data name="ViewStteings_Section1" xml:space="preserve">
+    <value>параметры</value>
+  </data>
+  <data name="ViewStteings_Title" xml:space="preserve">
+    <value>параметры</value>
+  </data>
+  <data name="VSSettings_ShowDates" xml:space="preserve">
+    <value>Дата шоу в сетках</value>
+  </data>
+  <data name="VSSettings_ShowLines" xml:space="preserve">
+    <value>Показать линии сетки</value>
+  </data>
+</root>

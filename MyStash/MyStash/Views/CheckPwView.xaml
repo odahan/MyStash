@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
+  xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
+  x:Class="MyStash.Views.CheckPwView"
+  Title="{helpers:Translate ViewCheckPw_Title}" x:Name="CheckPwPage" BackgroundColor="White">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <x:Double x:Key="ListFontSize">14</x:Double>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid Padding="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="40"/>
+    </Grid.RowDefinitions>
+
+    <!-- Password -->
+    <!--<StackLayout Orientation="Horizontal" Spacing="10">-->
+    <Entry Placeholder="Password to check" Grid.Row="0" Grid.Column="0" Text="{Binding Password}" Margin="0,5,0,5"/>
+    <!--<controls:TapImage NumberOfTapsRequired="1" Source="{helpers:ImageResource MyStash.Images.globalchecklist.png}"
+              Command="{Binding ForceAnalysis}" HeightRequest="40" WidthRequest="40"/>-->
+    <!--</StackLayout>-->
+
+    <!--Password analysis result-->
+    <Grid Grid.Row="1" RowSpacing="0" HeightRequest="100">
+      <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="4*"/>
+      </Grid.ColumnDefinitions>
+      <BoxView Color="#E7E7E7" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+
+      <Label Text="{helpers:Translate PasswordChecker_createMemoryTable_Score}" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{helpers:Translate ViewCheckPw_Bonus}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{helpers:Translate ViewCheckPw_Malus}" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{helpers:Translate ViewCheckPw_Strength}" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+      <BoxView Color="#F6F6F6" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"/>
+
+      <Label Text="{Binding Score}" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Accent"/>
+      <Label Text="{Binding Bonus}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Accent"/>
+      <Label Text="{Binding Malus}" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Accent"/>
+      <Label Text="{Binding Strength}" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Accent"  FontAttributes="Bold"/>
+
+    </Grid>
+
+    <!-- Analysis detail -->
+    <ListView Grid.Row="2"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="EndAndExpand"
+              ItemsSource="{Binding Items}"
+              HasUnevenRows="True"
+              RowHeight="48" ItemSelected="ListViewOnItemSelected">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid RowSpacing="0">
+              <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="4"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="20*"/>
+              </Grid.ColumnDefinitions>
+              <Grid.Margin>
+                  <!-- ReSharper disable once Xaml.InvalidType -->
+                <OnPlatform x:TypeArguments="Thickness" iOS="0" Android="0" WinPhone="0,0,16,0"/>
+              </Grid.Margin>
+              <Label Grid.Row="0" Grid.Column="0" Text="{Binding Description}" FontAttributes="Bold" FontSize="{StaticResource ListFontSize}"/>
+              <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Text="{Binding Total, StringFormat='{0:# ##0}'}" HorizontalOptions="End" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="{StaticResource ListFontSize}">
+                <Label.Triggers>
+                  <DataTrigger TargetType="Label" Binding="{Binding IsMalus}" Value="True">
+                    <Setter Property="TextColor" Value="Red"/>
+                  </DataTrigger>
+                  <DataTrigger TargetType="Label" Binding="{Binding IsBonus}" Value="True">
+                    <Setter Property="TextColor" Value="Green"/>
+                  </DataTrigger>
+                  <DataTrigger TargetType="Label" Binding="{Binding IsNull}" Value="True">
+                    <Setter Property="TextColor" Value="Gray"/>
+                  </DataTrigger>
+                </Label.Triggers>
+              </Label>
+              <Label Grid.Row="1" Grid.Column="0" Text="{Binding Detail}" FontSize="{StaticResource ListFontSize}"/>
+              <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Color="Silver" HeightRequest="1"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                       IsVisible="{Binding Source={x:Reference CheckPwPage}, Path=BindingContext.IsLineVisible}"/>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+
+    <!-- dismiss button -->
+    <StackLayout Grid.Row="3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="0" Margin="0">
+      <controls:TapImage Source="{helpers:ImageResource MyStash.Images.globalokbutton.png}" WidthRequest="30" HeightRequest="30" Command="{Binding Dismiss}"/>
+    </StackLayout>
+  </Grid>
+
+</ContentPage>

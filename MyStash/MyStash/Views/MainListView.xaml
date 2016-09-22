@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
+             xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
+             x:Class="MyStash.Views.MainListView"
+             Title="{helpers:Translate ViewMainList_Title}" x:Name="MainTabbedPage">
+
+  <TabbedPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="controls:BindablePicker">
+        <Setter Property="Scale">0.7</Setter>
+      </Style>
+      <Color x:Key="BottomLineColor">#F6F6F6</Color>
+      <x:Double x:Key="TitleFontSize">18</x:Double>
+      <Style TargetType="ListView">
+        <Setter Property="IsGroupingEnabled" Value="True"/>
+        <Setter Property="SeparatorVisibility" Value="None"/>
+        <Setter Property="HasUnevenRows" Value="True"/>
+        <Setter Property="RowHeight" Value="26"/>
+        <Setter Property="GroupHeaderTemplate">
+          <DataTemplate>
+            <ViewCell>
+              <Grid>
+                <Label Text="{Binding GroupName}" TextColor="#5A80FC" FontSize="18" FontAttributes="Bold"/>
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </Setter>
+        <Setter Property="ItemTemplate">
+          <DataTemplate>
+            <ViewCell>
+              <Grid>
+                <Label Text="{Binding Title}" VerticalOptions="Center" HorizontalOptions="Start" FontSize="{StaticResource TitleFontSize}"/>
+                <Image Source="{helpers:ImageResource MyStash.Images.globalhome.png}"
+                       VerticalOptions="Center" HorizontalOptions="End"
+                       Aspect="AspectFill"
+                       HeightRequest="20" WidthRequest="20" Margin="0,0,12,0">
+                  <Image.Triggers>
+                    <DataTrigger TargetType="Image" Binding="{Binding Pro}" Value="Personal">
+                      <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Image" Binding="{Binding Pro}" Value="Profesional">
+                      <Setter Property="IsVisible" Value="False"/>
+                    </DataTrigger>
+                  </Image.Triggers>
+                </Image>
+                <Image Source="{helpers:ImageResource MyStash.Images.globaloffice.png}"
+                       VerticalOptions="Center" HorizontalOptions="End"
+                       Aspect="AspectFill"
+                       HeightRequest="20" WidthRequest="20"
+                       Margin="0,0,12,0">
+                  <Image.Triggers>
+                    <DataTrigger TargetType="Image" Binding="{Binding Pro}" Value="Personal">
+                      <Setter Property="IsVisible" Value="False"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Image" Binding="{Binding Pro}" Value="Profesional">
+                      <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                  </Image.Triggers>
+                </Image>
+                <Label Text="{Binding ModifiedOnStr}" TextColor="#9AB8DE" FontSize="14"
+                       VerticalOptions="Center" HorizontalOptions="End"
+                       Margin="0,6,38,0" IsVisible="{Binding Source={x:Reference MainTabbedPage}, Path=BindingContext.IsDateVisible}"/>
+                <BoxView Color="Silver" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Margin="0,0,12,0" 
+                         IsVisible="{Binding Source={x:Reference MainTabbedPage}, Path=BindingContext.IsLineVisible}"/>
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </TabbedPage.Resources>
+  
+  <TabbedPage.ToolbarItems>
+    <ToolbarItem Text="{helpers:Translate ViewMainList_ChangePassword}" Icon="EditPassword.png" Command="{Binding ChangePasswordCommand}"/>
+    <ToolbarItem Text="{helpers:Translate ViewMainList_LockScreen}" Icon="Lock.png" Command="{Binding LockScreenCommand}"/>
+  </TabbedPage.ToolbarItems>
+
+  <!--ALL -->
+  
+  <ContentPage Title="{helpers:Translate ViewMainList_Tab_All_Title}" Padding="4" ClassId="ALL" Icon="ViewAll.png">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0">
+        <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
+        <ListView ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+                  ItemsSource="{Binding AllSheets}" 
+                  GroupDisplayBinding="{Binding GroupName}"
+                  GroupShortNameBinding="{Binding GroupShortName}">
+         </ListView>
+      </StackLayout>
+
+      <Grid Grid.Row="1" >
+        <BoxView Color="{StaticResource BottomLineColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal" Margin="5,0,0,0" Spacing="8">
+          <Label Text="{Binding DataCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="#676666" FontSize="14"/>
+          <Label Text="{Binding LoginCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12" />
+          <Label Text="{Binding NoteCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+          <Label Text="{Binding MiscCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+        </StackLayout>
+        <controls:BindablePicker VerticalOptions="Center" HorizontalOptions="End" WidthRequest="140" Margin="0,0,-5,0"
+                                 ItemsSource="{Binding ProFilterItems}" DisplayProperty="Item2" 
+          SelectedItem="{Binding ProfilterItem, Mode=TwoWay}" />
+
+      </Grid>
+      <Grid Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding IsBusy}">
+        <BoxView Color="Black" Opacity="0.7" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <Label Text="{helpers:Translate ViewMainList_LoadingData}" FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,100,0,0"/>
+        <ActivityIndicator HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           IsRunning="{Binding IsBusy}"/>
+      </Grid>
+    </Grid>
+  </ContentPage>
+
+
+  <!-- LOGINS -->
+
+  <ContentPage Title="{helpers:Translate ViewMainList_Logins}" Padding="4" ClassId="LOGINS" Icon="Login.png">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0">
+        <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
+        <ListView  ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+                   ItemsSource="{Binding LoginSheets}"
+                   GroupDisplayBinding="{Binding GroupName}"
+                   GroupShortNameBinding="{Binding GroupShortName}">
+        </ListView>
+      </StackLayout>
+      <Grid Grid.Row="1" >
+        <BoxView Color="{StaticResource BottomLineColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal" Margin="5,0,0,0" Spacing="8">
+          <Label Text="{Binding DataCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="#676666" FontSize="14"/>
+          <Label Text="{Binding LoginCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12" />
+          <Label Text="{Binding NoteCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+          <Label Text="{Binding MiscCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+        </StackLayout>
+        <controls:BindablePicker VerticalOptions="Center" HorizontalOptions="End"
+                                 ItemsSource="{Binding ProFilterItems}" DisplayProperty="Item2"
+          SelectedItem="{Binding ProfilterItem, Mode=TwoWay}" Margin="0,0,-5,0" WidthRequest="140"/>
+
+      </Grid>
+      <Grid Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding IsBusy}">
+        <BoxView Color="Black" Opacity="0.7" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <Label Text="{helpers:Translate ViewMainList_LoadingData}" FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,100,0,0"/>
+        <ActivityIndicator HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           IsRunning="{Binding IsBusy}"/>
+      </Grid>
+    </Grid>
+  </ContentPage>
+
+  <!-- NOTES -->
+  
+  <ContentPage Title="{helpers:Translate ViewMainList_Notes}" Padding="4" ClassId="NOTES" Icon="Note.png">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0">
+       <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
+        <ListView   ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+                    ItemsSource="{Binding NoteSheets}"
+                    GroupDisplayBinding="{Binding GroupName}"
+                    GroupShortNameBinding="{Binding GroupShortName}">
+        </ListView>
+      </StackLayout>
+      <Grid Grid.Row="1" >
+        <BoxView Color="{StaticResource BottomLineColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal" Margin="5,0,0,0" Spacing="8">
+          <Label Text="{Binding DataCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="#676666" FontSize="14"/>
+          <Label Text="{Binding LoginCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12" />
+          <Label Text="{Binding NoteCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+          <Label Text="{Binding MiscCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+        </StackLayout>
+        <controls:BindablePicker VerticalOptions="Center" HorizontalOptions="End"
+                                 ItemsSource="{Binding ProFilterItems}" DisplayProperty="Item2"
+          SelectedItem="{Binding ProfilterItem, Mode=TwoWay}" Margin="0,0,-5,0" WidthRequest="140"/>
+
+      </Grid>
+      <Grid Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding IsBusy}">
+        <BoxView Color="Black" Opacity="0.7" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <Label Text="{helpers:Translate ViewMainList_LoadingData}" FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,100,0,0"/>
+        <ActivityIndicator HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           IsRunning="{Binding IsBusy}"/>
+      </Grid>
+    </Grid>
+  </ContentPage>
+
+  <!-- MISC -->
+  
+  <ContentPage Title="{helpers:Translate ViewMainList_MiscPlural}" Padding="4" ClassId="MISC" Icon="misc.png">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0">
+       <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
+        <ListView   ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+                    ItemsSource="{Binding MiscSheets}"
+                    GroupDisplayBinding="{Binding GroupName}"
+                    GroupShortNameBinding="{Binding GroupShortName}" >
+        </ListView>
+      </StackLayout>
+      <Grid Grid.Row="1" >
+        <BoxView Color="{StaticResource BottomLineColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal" Margin="5,0,0,0" Spacing="8">
+          <Label Text="{Binding DataCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="#676666" FontSize="14"/>
+          <Label Text="{Binding LoginCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12" />
+          <Label Text="{Binding NoteCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+          <Label Text="{Binding MiscCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
+        </StackLayout>
+        <controls:BindablePicker VerticalOptions="Center" HorizontalOptions="End"
+                                 ItemsSource="{Binding ProFilterItems}" DisplayProperty="Item2"
+          SelectedItem="{Binding ProfilterItem, Mode=TwoWay}" Margin="0,0,-5,0" WidthRequest="140"/>
+
+      </Grid>
+      <Grid Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding IsBusy}">
+        <BoxView Color="Black" Opacity="0.7" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <Label Text="{helpers:Translate ViewMainList_LoadingData}" FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,100,0,0"/>
+        <ActivityIndicator HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                           IsRunning="{Binding IsBusy}"/>
+      </Grid>
+    </Grid>
+  </ContentPage>
+
+
+</TabbedPage>

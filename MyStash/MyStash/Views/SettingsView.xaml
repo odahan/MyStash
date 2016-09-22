@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
+             xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
+             x:Class="MyStash.Views.SettingsView"
+             Title="{helpers:Translate ViewStteings_Title}" >
+  <TableView Intent="{helpers:Translate ViewStteings_Section1}">
+    <TableSection Title="Visual">
+      <SwitchCell Text="{helpers:Translate ViewStteings_Section1}" On="{Binding AppSettings.DisplayLinesInLists}"/>
+      <SwitchCell Text="{helpers:Translate VSSettings_ShowDates}" On="{Binding AppSettings.DisplayDateInLists}"/>
+    </TableSection>
+    <TableSection Title="{helpers:Translate ViewSettings_Section2}">
+      <SwitchCell Text="{helpers:Translate ViewSettings_SearchInNotes}" On="{Binding AppSettings.SearchInNote}"/>
+      <SwitchCell Text="{helpers:Translate ViewSettings_SearchEverywhere}" On="{Binding AppSettings.SearchEverywhere}"/>
+    </TableSection>
+    <TableSection Title="{helpers:Translate ViewSettings_Section3}">
+      <SwitchCell Text="{helpers:Translate ViewSettings_AutoLock}" On="{Binding AppSettings.AutoTimeOut}"/>
+      <EntryCell Text="{Binding AppSettings.TimeOutSeconds}" Label="Timeout (seconds)" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+      <SwitchCell Text="{helpers:Translate ViewSettings_LockOnHidde}" On="{Binding AppSettings.LockOnHide}"/>
+      <SwitchCell Text="{helpers:Translate ViewSettings_Shuffle}" On="{Binding AppSettings.AreDigitsShuffled}"/>
+    </TableSection>
+    <TableSection Title="{helpers:Translate ViewSettings_Section4}">
+      <ViewCell>
+        <Grid>
+          <Label Text="{helpers:Translate ViewSettings_Language}" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+          <controls:BindablePicker DisplayProperty="Item2" VerticalOptions="Center" HorizontalOptions="End"
+                                     ItemsSource="{Binding Languages}" SelectedItem="{Binding SelectedCultureItem, Mode=TwoWay}" />
+        </Grid>
+      </ViewCell>
+    </TableSection>
+    <TableSection Title="{helpers:Translate ViewSettings_Section5}">
+      <SwitchCell Text="{helpers:Translate ViewSettings_EncryptedExport}" On="{Binding EncryptedData}"/>
+      <TextCell Text="{helpers:Translate ViewSettings_Explain}"/>
+      <SwitchCell Text="{helpers:Translate ViewSettings_Share}" On="{Binding ShareOnExport}"/>
+      <ViewCell>
+        <Grid>
+          <Label Text="{helpers:Translate ViewSettings_ExportCsv}" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+          <Button Text="{helpers:Translate ViewSettings_Go}" VerticalOptions="Center" HorizontalOptions="End" Command="{Binding DataCommand}" CommandParameter="0"/>
+        </Grid>
+      </ViewCell>
+      <ViewCell>
+        <Grid>
+          <Label Text="{helpers:Translate ViewSettings_ExportSql}" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+          <Button Text="{helpers:Translate ViewSettings_Go}" VerticalOptions="Center" HorizontalOptions="End" Command="{Binding DataCommand}" CommandParameter="1"/>
+        </Grid>
+      </ViewCell>
+    </TableSection>
+    <TableSection Title="{helpers:Translate ViewSettings_Section6}">
+      <SwitchCell Text="{helpers:Translate ViewSettings_ClearDb}" On="{Binding ClearDbBeforeImport}"/>
+      <SwitchCell Text="{helpers:Translate ViewSettings_SkipId}" On="{Binding SkipExistingId}"/>
+      <SwitchCell Text="{helpers:Translate ViewSettings_SkipTitles}" On="{Binding SkipExistingTitle}"/>
+      <ViewCell>
+        <Grid>
+          <Label Text="{helpers:Translate ViewSettings_ImportCsv}" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+          <Button Text="{helpers:Translate ViewSettings_Go}" VerticalOptions="Center" HorizontalOptions="End" Command="{Binding DataCommand}" CommandParameter="2"/>
+        </Grid>
+      </ViewCell>
+     <!-- <ViewCell>
+        <Grid>
+          <Label Text="Import SQL data" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+          <Button Text="Go!" VerticalOptions="Center" HorizontalOptions="End" Command="{Binding DataCommand}" CommandParameter="3"/>
+        </Grid>
+      </ViewCell>-->
+    </TableSection>
+  </TableView>
+</ContentPage>

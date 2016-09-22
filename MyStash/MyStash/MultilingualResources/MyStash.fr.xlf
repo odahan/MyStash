@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="fr" original="MYSTASH/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MYSTASH/RESX/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="AppName" translate="yes" xml:space="preserve">
+          <source>MyStash</source>
+          <target state="translated" state-qualifier="mt-suggestion">MyStash</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Application title</note>
+        </trans-unit>
+        <trans-unit id="EventToCommandBehavior_CantRegisterEvent" translate="yes" xml:space="preserve">
+          <source>EventToCommandBehavior: Can't register the '{0}' event.</source>
+          <target state="translated" state-qualifier="mt-suggestion">EventToCommandBehavior : Impossible d’enregistrer l’événement « {0} ».</target>
+        </trans-unit>
+        <trans-unit id="EventToCommandBehavior_CantDeRegisterEvent" translate="yes" xml:space="preserve">
+          <source>EventToCommandBehavior: Can't de-register the '{0}' event.</source>
+          <target state="translated" state-qualifier="mt-suggestion">EventToCommandBehavior : Ne peut pas désenregistrer l’événement « {0} ».</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_PasswordStrength_Unknown" translate="yes" xml:space="preserve">
+          <source>Unknown</source>
+          <target state="translated" state-qualifier="tm-suggestion">Inconnu</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Empty" translate="yes" xml:space="preserve">
+          <source>Empty</source>
+          <target state="translated">Vide</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Rejected" translate="yes" xml:space="preserve">
+          <source>Rejected</source>
+          <target state="translated" state-qualifier="tm-suggestion">Refusé</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Password_Length" translate="yes" xml:space="preserve">
+          <source>Password Length</source>
+          <target state="translated" state-qualifier="tm-suggestion">Longueur du mot de passe</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Uppercase_Letters" translate="yes" xml:space="preserve">
+          <source>Uppercase Letters</source>
+          <target state="translated" state-qualifier="mt-suggestion">Lettres majuscules</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Lowercase_Letters" translate="yes" xml:space="preserve">
+          <source>Lowercase Letters</source>
+          <target state="translated" state-qualifier="mt-suggestion">Lettres minuscules</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Numbers" translate="yes" xml:space="preserve">
+          <source>Numbers</source>
+          <target state="translated" state-qualifier="tm-suggestion">Nombres</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Symbols" translate="yes" xml:space="preserve">
+          <source>Symbols</source>
+          <target state="translated" state-qualifier="tm-suggestion">Symboles</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Middle_Numbers_or_Symbols" translate="yes" xml:space="preserve">
+          <source>Middle Numbers or Symbols</source>
+          <target state="translated">Chiffres ou symboles au milieu</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Requirement__Length_8" translate="yes" xml:space="preserve">
+          <source>Requirement. Length&gt;8</source>
+          <target state="translated" state-qualifier="mt-suggestion">Exigence. Longueur&gt;8</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Requirement__Uppercase" translate="yes" xml:space="preserve">
+          <source>Requirement. Uppercase</source>
+          <target state="translated" state-qualifier="mt-suggestion">Exigence. Majuscules</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Requirement__Lowercase" translate="yes" xml:space="preserve">
+          <source>Requirement. Lowercase</source>
+          <target state="translated" state-qualifier="mt-suggestion">Exigence. Minuscules</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Requirement__Digit" translate="yes" xml:space="preserve">
+          <source>Requirement. Digit</source>
+          <target state="translated">Exigence. Chiffres</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Requirement__Symbol" translate="yes" xml:space="preserve">
+          <source>Requirement. Symbol</source>
+          <target state="translated">Exigence. Symboles</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails__3_or_more_requirments" translate="yes" xml:space="preserve">
+          <source>3 or more requirements</source>
+          <target state="translated">Respect de 3 exigences ou plus</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Less_than_3_requirments" translate="yes" xml:space="preserve">
+          <source>Less than 3 requirements</source>
+          <target state="translated">Respect de moins de 3 exigences</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Same_symbol" translate="yes" xml:space="preserve">
+          <source>Same symbol</source>
+          <target state="translated">Symbole répété</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Letters_only" translate="yes" xml:space="preserve">
+          <source>Letters only</source>
+          <target state="translated" state-qualifier="mt-suggestion">Que des lettres</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Numbers_only" translate="yes" xml:space="preserve">
+          <source>Numbers only</source>
+          <target state="translated">Que des chiffres</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Repeat_Characters__Case_Insensitive_" translate="yes" xml:space="preserve">
+          <source>Repeated Characters (Case Insensitive)</source>
+          <target state="translated">Répétition de caractères (insensible à la casse)</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Consecutive_Uppercase_Letters" translate="yes" xml:space="preserve">
+          <source>Consecutive Uppercase Letters</source>
+          <target state="translated">Lettres majuscules consécutives</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Consecutive_Lowercase_Letters" translate="yes" xml:space="preserve">
+          <source>Consecutive Lowercase Letters</source>
+          <target state="translated" state-qualifier="mt-suggestion">Lettres minuscules consécutives</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Consecutive_Numbers" translate="yes" xml:space="preserve">
+          <source>Consecutive Numbers</source>
+          <target state="translated">Chiffres consécutifs</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Sequential_Letters__3__" translate="yes" xml:space="preserve">
+          <source>Sequential Letters (3+)</source>
+          <target state="translated">Séquence de lettres (3 ou plus)</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Sequential_Numbers__3__" translate="yes" xml:space="preserve">
+          <source>Sequential Numbers (3+)</source>
+          <target state="translated">Séquence de chiffres (3 ou plus)</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Very_Weak" translate="yes" xml:space="preserve">
+          <source>Very Weak</source>
+          <target state="translated" state-qualifier="mt-suggestion">Très faible</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Weak" translate="yes" xml:space="preserve">
+          <source>Weak</source>
+          <target state="translated" state-qualifier="tm-suggestion">Faible</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Good" translate="yes" xml:space="preserve">
+          <source>Good</source>
+          <target state="translated">Bon</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Strong" translate="yes" xml:space="preserve">
+          <source>Strong</source>
+          <target state="translated" state-qualifier="tm-suggestion">Fort</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Very_Strong" translate="yes" xml:space="preserve">
+          <source>Very Strong</source>
+          <target state="translated" state-qualifier="mt-suggestion">Très fort</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_CheckPasswordWithDetails_Ultra_Strong" translate="yes" xml:space="preserve">
+          <source>Ultra Strong</source>
+          <target state="translated">Ultra fort</target>
+        </trans-unit>
+        <trans-unit id="PasswordChecker_createMemoryTable_Score" translate="yes" xml:space="preserve">
+          <source>Score</source>
+          <target state="translated" state-qualifier="tm-suggestion">Score</target>
+        </trans-unit>
+        <trans-unit id="StringExtensions_Contains_substring_cannot_be_null_" translate="yes" xml:space="preserve">
+          <source>substring cannot be null.</source>
+          <target state="translated">la sous-chaîne ne peut pas être null.</target>
+        </trans-unit>
+        <trans-unit id="StringExtensions_Contains_comp_is_not_a_member_of_StringComparison" translate="yes" xml:space="preserve">
+          <source>comp is not a member of StringComparison</source>
+          <target state="translated">argument 'comp' n’est pas membre de StringComparison</target>
+        </trans-unit>
+        <trans-unit id="InfoSheet_ProFilterDictionary_All" translate="yes" xml:space="preserve">
+          <source>All</source>
+          <target state="translated">Tout</target>
+        </trans-unit>
+        <trans-unit id="InfoSheet_ProFilterDictionary_Personal" translate="yes" xml:space="preserve">
+          <source>Personal</source>
+          <target state="translated" state-qualifier="tm-suggestion">Personnel</target>
+        </trans-unit>
+        <trans-unit id="InfoSheet_ProFilterDictionary_Professional" translate="yes" xml:space="preserve">
+          <source>Professional</source>
+          <target state="translated" state-qualifier="tm-suggestion">Professionnel</target>
+        </trans-unit>
+        <trans-unit id="InfoSheet_CategoryDictionary_Login" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">Login</target>
+        </trans-unit>
+        <trans-unit id="InfoSheet_CategoryDictionary_Misc" translate="yes" xml:space="preserve">
+          <source>Misc</source>
+          <target state="translated" state-qualifier="tm-suggestion">Divers</target>
+        </trans-unit>
+        <trans-unit id="InfoSheet_CategoryDictionary_Note" translate="yes" xml:space="preserve">
+          <source>Note</source>
+          <target state="translated">Note</target>
+        </trans-unit>
+        <trans-unit id="DialogService_ShowMessage_Ok" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="translated" state-qualifier="tm-suggestion">OK</target>
+        </trans-unit>
+        <trans-unit id="NavigationService_getPage_Page_inconnue" translate="yes" xml:space="preserve">
+          <source>Page inconnue: {0}. NavigationService.Configure a-t-il été oublié ?</source>
+          <target state="translated" state-qualifier="mt-suggestion">Page inconnue : {0}. NavigationService.Configure a-t-il été oublié ?</target>
+        </trans-unit>
+        <trans-unit id="NavigationService_getPage_Page_inconnueConfigure" translate="yes" xml:space="preserve">
+          <source>Page inconnue: {0}. NavigationService.Configure a-t-il été oublié ?</source>
+          <target state="translated" state-qualifier="mt-suggestion">Page inconnue : {0}. NavigationService.Configure a-t-il été oublié ?</target>
+        </trans-unit>
+        <trans-unit id="NavigationService_getPage_Aucun_constructeur_approprié_trouvé" translate="yes" xml:space="preserve">
+          <source>Aucun constructeur approprié trouvé pour {0}</source>
+          <target state="translated" state-qualifier="mt-suggestion">Aucun constructeur approprié trouvé verser {0}</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_Login_copied_to_clipboard" translate="yes" xml:space="preserve">
+          <source>Login copied to clipboard</source>
+          <target state="translated">Login vers presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_The_login_has_been_copied_to_the_clipboard" translate="yes" xml:space="preserve">
+          <source>The login has been copied to the clipboard</source>
+          <target state="translated">Le login a été copié dans le presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_Password_copied_to_clipboard" translate="yes" xml:space="preserve">
+          <source>Password copied to clipboard</source>
+          <target state="translated">Mot de passe vers presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_The_password_has_been_copied_to_the_clipboard" translate="yes" xml:space="preserve">
+          <source>The password has been copied to the clipboard</source>
+          <target state="translated">Le mot de passe a été copié dans le presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_Note_copied_to_clipboard" translate="yes" xml:space="preserve">
+          <source>Note copied to clipboard</source>
+          <target state="translated">Note vers presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_The_note_has_been_copied_to_the_clipboard" translate="yes" xml:space="preserve">
+          <source>The note has been copied to the clipboard</source>
+          <target state="translated" state-qualifier="mt-suggestion">La note a été copiée dans le presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_Invalid_URL" translate="yes" xml:space="preserve">
+          <source>Invalid URL</source>
+          <target state="translated" state-qualifier="tm-suggestion">URL non valide</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_Perhaps_are_you_missing_the_protocol_name___http_____for_example___" translate="yes" xml:space="preserve">
+          <source>Perhaps are you missing the protocol name ('http://' for example) ?</source>
+          <target state="translated">Peut-être avez-vous oublié le nom du protocole (par exemple « http:// ») ?</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_More_time" translate="yes" xml:space="preserve">
+          <source>More time</source>
+          <target state="translated" state-qualifier="tm-suggestion">Plus de temps</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_You_ve_got__0__seconds_more_" translate="yes" xml:space="preserve">
+          <source>You've got {0} seconds more.</source>
+          <target state="translated">Vous avez {0} secondes de plus.</target>
+        </trans-unit>
+        <trans-unit id="GeneratePwViewModel_generated_click_to_generate_" translate="yes" xml:space="preserve">
+          <source>click to generate!</source>
+          <target state="translated" state-qualifier="mt-suggestion">Cliquez pour générer !</target>
+        </trans-unit>
+        <trans-unit id="GeneratePwViewModel_GeneratePwViewModel_Copy_to_clipboard" translate="yes" xml:space="preserve">
+          <source>Copy to clipboard</source>
+          <target state="translated">Copier</target>
+        </trans-unit>
+        <trans-unit id="GeneratePwViewModel_GeneratePwViewModel_Generated_password_copied_to_the_clipboard" translate="yes" xml:space="preserve">
+          <source>Generated password copied to the clipboard</source>
+          <target state="translated">Mot de passe copié dans le presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="GeneratePwViewModel_IncomingCommand_My_Stash_generated_password" translate="yes" xml:space="preserve">
+          <source>My Stash generated password</source>
+          <target state="translated">Mot de passé généré par MyStash</target>
+        </trans-unit>
+        <trans-unit id="MainViewModel_checkLog_Database_Path" translate="yes" xml:space="preserve">
+          <source>Database Path</source>
+          <target state="translated">Chemin d’accès à la base de données</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">info for clipboard seems not use by the os</note>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_SetPwViewModel_Your_new_password___0___has_been_recorded__Don_t_forget_it__" translate="yes" xml:space="preserve">
+          <source>Your new password '{0}' has been recorded. Don't forget it !</source>
+          <target state="translated" state-qualifier="mt-suggestion">Votre nouveau mot de passe « {0} » a été enregistré. Ne l’oubliez pas !</target>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_SetPwViewModel_Confirmation" translate="yes" xml:space="preserve">
+          <source>Confirmation</source>
+          <target state="translated" state-qualifier="tm-suggestion">Confirmation</target>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_checkValidity_Password_can_t_be_empty_" translate="yes" xml:space="preserve">
+          <source>Password can't be empty.</source>
+          <target state="translated">Le mot de passe ne peut pas être vide.</target>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_checkValidity_Invalid_character_s__in_password_" translate="yes" xml:space="preserve">
+          <source>Invalid character(s) in password.</source>
+          <target state="translated" state-qualifier="mt-suggestion">Caractères non valides dans mot de passe.</target>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_checkValidity_Password_and_control_don_t_match__" translate="yes" xml:space="preserve">
+          <source>Password and control don't match !</source>
+          <target state="translated">Les 2 saisies ne correspondent pas !</target>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_checkValidity_" translate="yes" xml:space="preserve">
+          <source>Password length must be &gt;= 4</source>
+          <target state="translated" state-qualifier="mt-suggestion">Longueur de mot de passe doit être &gt;= 4</target>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_checkValidity_20" translate="yes" xml:space="preserve">
+          <source>Password length must be &lt;= 20 characters</source>
+          <target state="translated" state-qualifier="mt-suggestion">Longueur de mot de passe doit être &lt;= 20 caractères</target>
+        </trans-unit>
+        <trans-unit id="SetPwViewModel_checkValidity_Only_one_single_character_is_used" translate="yes" xml:space="preserve">
+          <source>Only one single character is used</source>
+          <target state="translated">Un seul caractère est utilisé</target>
+        </trans-unit>
+        <trans-unit id="ViewCheckPw_Title" translate="yes" xml:space="preserve">
+          <source>Password Analysis</source>
+          <target state="translated">Analyseur</target>
+        </trans-unit>
+        <trans-unit id="ViewCheckPw_Bonus" translate="yes" xml:space="preserve">
+          <source>Bonus</source>
+          <target state="translated" state-qualifier="tm-suggestion">Prime</target>
+        </trans-unit>
+        <trans-unit id="ViewCheckPw_Malus" translate="yes" xml:space="preserve">
+          <source>Malus</source>
+          <target state="translated" state-qualifier="mt-suggestion">Malus</target>
+        </trans-unit>
+        <trans-unit id="ViewCheckPw_Strength" translate="yes" xml:space="preserve">
+          <source>Strength</source>
+          <target state="translated" state-qualifier="tm-suggestion">Force</target>
+        </trans-unit>
+        <trans-unit id="ViewDetail_NameOrURL" translate="yes" xml:space="preserve">
+          <source>Name/Url</source>
+          <target state="translated">Nom/Url</target>
+        </trans-unit>
+        <trans-unit id="ViewDetail_Password" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated">Mot de p.</target>
+        </trans-unit>
+        <trans-unit id="ViewDetail_Title" translate="yes" xml:space="preserve">
+          <source>Detail</source>
+          <target state="translated">Détail</target>
+        </trans-unit>
+        <trans-unit id="VMDetail_CreatedOn" translate="yes" xml:space="preserve">
+          <source>Created on</source>
+          <target state="translated">Créé le</target>
+        </trans-unit>
+        <trans-unit id="VMDetail_ModifiedOn" translate="yes" xml:space="preserve">
+          <source>Modified on</source>
+          <target state="translated">Modifié le</target>
+        </trans-unit>
+        <trans-unit id="VewSetPW_Warning" translate="yes" xml:space="preserve">
+          <source>Do not forget your password ! There is no backdoor and we DO NOT have any magical trick to help you...</source>
+          <target state="translated">N’oubliez pas votre mot de passe ! Nous n'avons pas de moyen pour vous aider en cas d'oubli...</target>
+        </trans-unit>
+        <trans-unit id="ViewDetail_CheckPw" translate="yes" xml:space="preserve">
+          <source>Check PW</source>
+          <target state="translated">Vérifier MdP</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_Generate" translate="yes" xml:space="preserve">
+          <source>Generate</source>
+          <target state="translated" state-qualifier="tm-suggestion">Générer</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_Length" translate="yes" xml:space="preserve">
+          <source>Length</source>
+          <target state="translated" state-qualifier="tm-suggestion">Longueur</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_Parameters" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+          <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_Symbols" translate="yes" xml:space="preserve">
+          <source>Symbols</source>
+          <target state="translated" state-qualifier="tm-suggestion">Symboles</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_Title" translate="yes" xml:space="preserve">
+          <source>Password Generation</source>
+          <target state="translated">Générateur</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_AllPlural" translate="yes" xml:space="preserve">
+          <source>All</source>
+          <target state="translated">Tout</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_LoadingData" translate="yes" xml:space="preserve">
+          <source>Loading Data...</source>
+          <target state="translated">Chargement ...</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_Logins" translate="yes" xml:space="preserve">
+          <source>Logins</source>
+          <target state="translated">Logins</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_MiscPlural" translate="yes" xml:space="preserve">
+          <source>Misc</source>
+          <target state="translated" state-qualifier="tm-suggestion">Divers</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_Notes" translate="yes" xml:space="preserve">
+          <source>Notes</source>
+          <target state="translated">Notes</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_Search" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="translated" state-qualifier="tm-suggestion">Rechercher</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_Tab_All_Title" translate="yes" xml:space="preserve">
+          <source>All</source>
+          <target state="translated">Tout</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_Title" translate="yes" xml:space="preserve">
+          <source>Data</source>
+          <target state="translated">Données</target>
+        </trans-unit>
+        <trans-unit id="ViewMain_Title" translate="yes" xml:space="preserve">
+          <source>Please enter your code</source>
+          <target state="translated" state-qualifier="mt-suggestion">Veuillez entrer votre code</target>
+        </trans-unit>
+        <trans-unit id="ViewSetPW_AllowedChars" translate="yes" xml:space="preserve">
+          <source>Allowed characters: '0'..'9' 'A'..'F'</source>
+          <target state="translated">Caractères autorisés : '0'..' 9' 'A'..' F'</target>
+        </trans-unit>
+        <trans-unit id="ViewSetPW_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated" state-qualifier="tm-suggestion">Annuler</target>
+        </trans-unit>
+        <trans-unit id="ViewSetPW_NewPW" translate="yes" xml:space="preserve">
+          <source>New Password</source>
+          <target state="translated">Nouveau MdP</target>
+        </trans-unit>
+        <trans-unit id="ViewSetPW_NewPWControl" translate="yes" xml:space="preserve">
+          <source>New Password Control</source>
+          <target state="translated">Mdp Contrôle</target>
+        </trans-unit>
+        <trans-unit id="ViewSetPW_NewPWControlHint" translate="yes" xml:space="preserve">
+          <source>Type it here again</source>
+          <target state="translated" state-qualifier="mt-suggestion">Tapez-le à nouveau ici</target>
+        </trans-unit>
+        <trans-unit id="ViewSetPW_NewPWHint" translate="yes" xml:space="preserve">
+          <source>Type your password</source>
+          <target state="translated" state-qualifier="mt-suggestion">Tapez votre mot de passe</target>
+        </trans-unit>
+        <trans-unit id="ViewSetPW_Title" translate="yes" xml:space="preserve">
+          <source>Set New Password</source>
+          <target state="translated">Nouveau MdP</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_ChangePassword" translate="yes" xml:space="preserve">
+          <source>Change PW</source>
+          <target state="translated">Changer MdP</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_LockScreen" translate="yes" xml:space="preserve">
+          <source>Lock Screen</source>
+          <target state="translated">Verrouiller</target>
+        </trans-unit>
+        <trans-unit id="AppSettings_CultureDictionary_Default" translate="yes" xml:space="preserve">
+          <source>Default</source>
+          <target state="translated">Par Défaut</target>
+        </trans-unit>
+        <trans-unit id="AppSettings_CultureDictionary_English" translate="yes" xml:space="preserve">
+          <source>English</source>
+          <target state="translated" state-qualifier="tm-suggestion">Anglais</target>
+        </trans-unit>
+        <trans-unit id="AppSettings_CultureDictionary_French" translate="yes" xml:space="preserve">
+          <source>French</source>
+          <target state="translated" state-qualifier="tm-suggestion">Français</target>
+        </trans-unit>
+        <trans-unit id="AppSettings_CultureDictionary_German" translate="yes" xml:space="preserve">
+          <source>German</source>
+          <target state="translated" state-qualifier="tm-suggestion">Allemand</target>
+        </trans-unit>
+        <trans-unit id="AppSettings_CultureDictionary_Italian" translate="yes" xml:space="preserve">
+          <source>Italian</source>
+          <target state="translated" state-qualifier="tm-suggestion">Italien</target>
+        </trans-unit>
+        <trans-unit id="AppSettings_CultureDictionary_Russian" translate="yes" xml:space="preserve">
+          <source>Russian</source>
+          <target state="translated" state-qualifier="tm-suggestion">Russe</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_None" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="translated">Non traduit</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_Novice" translate="yes" xml:space="preserve">
+          <source>Novice</source>
+          <target state="translated" state-qualifier="tm-suggestion">novice</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_Beginner" translate="yes" xml:space="preserve">
+          <source>Beginner</source>
+          <target state="translated" state-qualifier="tm-suggestion">Facile</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_Connoisseur" translate="yes" xml:space="preserve">
+          <source>Connoisseur</source>
+          <target state="translated" state-qualifier="mt-suggestion">Connaisseur</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_Elitist" translate="yes" xml:space="preserve">
+          <source>Elitist</source>
+          <target state="translated" state-qualifier="mt-suggestion">Élitiste</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_Expert" translate="yes" xml:space="preserve">
+          <source>Expert</source>
+          <target state="translated" state-qualifier="tm-suggestion">Expert</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_Master" translate="yes" xml:space="preserve">
+          <source>Master</source>
+          <target state="translated">Maître</target>
+        </trans-unit>
+        <trans-unit id="LeetMaker_LeetStrengthStr_Alien" translate="yes" xml:space="preserve">
+          <source>Alien</source>
+          <target state="translated">Alien</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_OriginalWord" translate="yes" xml:space="preserve">
+          <source>Password to encode</source>
+          <target state="translated">Mot de p. à encoder</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_LeetModeSwitch" translate="yes" xml:space="preserve">
+          <source>L33t Mode (else Random mode)</source>
+          <target state="translated">Mode L33t (sinon aléatoire)</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_LeetLevel" translate="yes" xml:space="preserve">
+          <source>Obfuscation level</source>
+          <target state="translated">Niveau de brouillage</target>
+        </trans-unit>
+        <trans-unit id="EditView_Title" translate="yes" xml:space="preserve">
+          <source>Title</source>
+          <target state="translated">Titre</target>
+        </trans-unit>
+        <trans-unit id="DialogService_ShowMessage_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated" state-qualifier="tm-suggestion">Annuler</target>
+        </trans-unit>
+        <trans-unit id="ViewEdit_DeleteButton" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated" state-qualifier="tm-suggestion">Supprimer</target>
+        </trans-unit>
+        <trans-unit id="ViewEdit_NoteSection" translate="yes" xml:space="preserve">
+          <source>Note</source>
+          <target state="translated">Note</target>
+        </trans-unit>
+        <trans-unit id="ViewEdit_TitleCreate" translate="yes" xml:space="preserve">
+          <source>New data</source>
+          <target state="translated">Nouvelle fiche</target>
+        </trans-unit>
+        <trans-unit id="ViewEdit_TitleModify" translate="yes" xml:space="preserve">
+          <source>Modify data</source>
+          <target state="translated">Modification</target>
+        </trans-unit>
+        <trans-unit id="ViewGeneratePW_BackButton" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated" state-qualifier="tm-suggestion">Retour</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Action_canceled" translate="yes" xml:space="preserve">
+          <source>Action canceled</source>
+          <target state="translated" state-qualifier="mt-suggestion">Action annulée</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_have_not_been_modified" translate="yes" xml:space="preserve">
+          <source>Data have not been modified</source>
+          <target state="translated">Les données n’ont PAS été modifiées</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_saved" translate="yes" xml:space="preserve">
+          <source>Data saved</source>
+          <target state="translated" state-qualifier="tm-suggestion">Données enregistrées</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_has_been_saved" translate="yes" xml:space="preserve">
+          <source>Data has been saved</source>
+          <target state="translated" state-qualifier="mt-suggestion">Les données ont été enregistrées</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Can_t_save_data" translate="yes" xml:space="preserve">
+          <source>Can't save data</source>
+          <target state="translated">Erreur de données</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_have_NOT_been_saved_" translate="yes" xml:space="preserve">
+          <source>Data have NOT been saved.</source>
+          <target state="translated">Les données n’ont PAS été enregistrées.</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_error" translate="yes" xml:space="preserve">
+          <source>Data error</source>
+          <target state="translated">Erreur de données</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Delete_data__Are_you_sure__" translate="yes" xml:space="preserve">
+          <source>Delete data. Are you sure ?</source>
+          <target state="translated">Supprimer la fiche. Êtes-vous sûr ?</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Confirmation" translate="yes" xml:space="preserve">
+          <source>Confirmation</source>
+          <target state="translated" state-qualifier="tm-suggestion">Confirmation</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_deleted" translate="yes" xml:space="preserve">
+          <source>Data deleted</source>
+          <target state="translated">Fiche supprimée</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_has_been_deleted" translate="yes" xml:space="preserve">
+          <source>Data has been deleted</source>
+          <target state="translated">La fiche a été supprimée</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Can_t_delete_data" translate="yes" xml:space="preserve">
+          <source>Can't delete data</source>
+          <target state="translated">Erreur de données</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_EditViewModel_Data_have_NOT_been_deleted_" translate="yes" xml:space="preserve">
+          <source>Data have NOT been deleted.</source>
+          <target state="translated">La fiche n'a PAS été supprimée</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Enter_a_title" translate="yes" xml:space="preserve">
+          <source>Enter a title</source>
+          <target state="translated" state-qualifier="tm-suggestion">Entrer un titre</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Title_is_mandatory" translate="yes" xml:space="preserve">
+          <source>Title is mandatory</source>
+          <target state="translated" state-qualifier="mt-suggestion">Le titre est obligatoire</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Select_a_category" translate="yes" xml:space="preserve">
+          <source>Select a category</source>
+          <target state="translated">Catégorie absente</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_A_category_must_be_selected" translate="yes" xml:space="preserve">
+          <source>A category must be selected</source>
+          <target state="translated" state-qualifier="mt-suggestion">Une catégorie doit être sélectionnée</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Login_is_empty" translate="yes" xml:space="preserve">
+          <source>Login is empty</source>
+          <target state="translated" state-qualifier="mt-suggestion">Login est vide</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Enter_a_Login_name" translate="yes" xml:space="preserve">
+          <source>Enter a Login name</source>
+          <target state="translated" state-qualifier="mt-suggestion">Entrez un nom de connexion</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Password_is_empty" translate="yes" xml:space="preserve">
+          <source>Password is empty</source>
+          <target state="translated">Mot de passe vide</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Enter_a_password" translate="yes" xml:space="preserve">
+          <source>Enter a password</source>
+          <target state="translated">Entrer le mot de passe</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Note_is_empty" translate="yes" xml:space="preserve">
+          <source>Note is empty</source>
+          <target state="translated">Note est vide</target>
+        </trans-unit>
+        <trans-unit id="EditViewModel_isSheetOkVerbose_Enter_something_in_Note_field" translate="yes" xml:space="preserve">
+          <source>Enter something in Note field</source>
+          <target state="translated">Saisissez la note</target>
+        </trans-unit>
+        <trans-unit id="DetailViewModel_DetailViewModel_Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">Modifier</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_EncryptedData_Uncrypted_data_export_is_not_safe" translate="yes" xml:space="preserve">
+          <source>Unencrypted data export is not safe ! Use this mode only for good reasons.</source>
+          <target state="translated">L'exportation de données non chiffrées n’est pas sûre ! Utilisez ce mode uniquement pour de bonnes raisons.</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_EncryptedData_Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated" state-qualifier="tm-suggestion">Avertissement</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_ClearDbBeforeImport" translate="yes" xml:space="preserve">
+          <source>All data will be deleted before import. If not sure switch this option OFF !</source>
+          <target state="translated">Toutes les données seront supprimées avant l’importation. Si ce n’est pas ce que vous voulez désactivez cette option !</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_exportData_No_data" translate="yes" xml:space="preserve">
+          <source>No data</source>
+          <target state="translated" state-qualifier="tm-suggestion">Aucune donnée</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_exportData_No_data_to_export" translate="yes" xml:space="preserve">
+          <source>No data to export</source>
+          <target state="translated" state-qualifier="mt-suggestion">Aucune données à exporter</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_exportData_Export" translate="yes" xml:space="preserve">
+          <source>Export</source>
+          <target state="translated" state-qualifier="tm-suggestion">Exporter</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">titre</note>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_exportData_Data_are_in_the_clipboard" translate="yes" xml:space="preserve">
+          <source>Data are in the clipboard !</source>
+          <target state="translated">Les données sont dans le presse-papiers !</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_exportData_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="translated" state-qualifier="tm-suggestion">Erreur</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">titre</note>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_exportData_OK" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="translated" state-qualifier="tm-suggestion">OK</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_importCSVWithData_Import_succeed" translate="yes" xml:space="preserve">
+          <source>Import succeeded</source>
+          <target state="translated">Importation réussie</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">titre</note>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_importCSVWithData_No_data_imported" translate="yes" xml:space="preserve">
+          <source>No data imported</source>
+          <target state="translated" state-qualifier="tm-suggestion">Aucune donnée importée.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">titre</note>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_importCSVWithData_No_data_have_been_imported_" translate="yes" xml:space="preserve">
+          <source>No data have been imported.</source>
+          <target state="translated" state-qualifier="mt-suggestion">Aucuns données n’ont été importées.</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_importCSVWithData__0__sheets_have_been_imported_" translate="yes" xml:space="preserve">
+          <source>{0} sheets have been imported.</source>
+          <target state="translated" state-qualifier="mt-suggestion">{0} feuilles ont été importées.</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_importSql_Not_implemented" translate="yes" xml:space="preserve">
+          <source>Not implemented</source>
+          <target state="translated" state-qualifier="tm-suggestion">Non implémenté</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_importSql_No_SQL_import_in_this_version" translate="yes" xml:space="preserve">
+          <source>No SQL import in this version</source>
+          <target state="translated" state-qualifier="mt-suggestion">Aucune importation SQL dans cette version</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport_Import_failed" translate="yes" xml:space="preserve">
+          <source>Import failed</source>
+          <target state="translated" state-qualifier="tm-suggestion">Échec de l'importation</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">titre</note>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport_Import_aborted_bad_data_line__0_" translate="yes" xml:space="preserve">
+          <source>Import aborted bad data line {0}</source>
+          <target state="translated">Importation avortée, mauvaises données ligne {0}</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport_field__0__can_t_be_found" translate="yes" xml:space="preserve">
+          <source>field {0} can't be found</source>
+          <target state="translated" state-qualifier="mt-suggestion">champ {0} introuvable</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport_Corrupted_data__1st_line_missing_" translate="yes" xml:space="preserve">
+          <source>Corrupted data (1st line missing)</source>
+          <target state="translated">Données non exploitables (1ère ligne manquante)</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport___0___is_not_a_valid_ID" translate="yes" xml:space="preserve">
+          <source>'{0}' is not a valid ID</source>
+          <target state="translated">'{0}' n’est pas un ID valide</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport___0___is_not_a_valid_boolean" translate="yes" xml:space="preserve">
+          <source>'{0}' is not a valid boolean</source>
+          <target state="translated">'{0}' n’est pas une valeur booléenne valide</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport___0___is_not_a_valid_date_time" translate="yes" xml:space="preserve">
+          <source>'{0}' is not a valid date/time</source>
+          <target state="translated">'{0}' n’est pas une date/heure valide</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport___0___is_not_a_valid_Category" translate="yes" xml:space="preserve">
+          <source>'{0}' is not a valid Category</source>
+          <target state="translated">'{0}' n’est pas une catégorie valide</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport___0___is_not_a_valid_algorithm_data_could_be_unreadable" translate="yes" xml:space="preserve">
+          <source>'{0}' is not a valid algorithm data could be unreadable</source>
+          <target state="translated">'{0}' n’est pas un algorithme valide. Les données pourraient être illisibles</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport___0___is_not_a_valid_field_position_" translate="yes" xml:space="preserve">
+          <source>'{0}' is not a valid field position.</source>
+          <target state="translated">'{0}' n’est pas une position de champ valide.</target>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport_Ignored_data" translate="yes" xml:space="preserve">
+          <source>Ignored data</source>
+          <target state="translated" state-qualifier="mt-suggestion">Données ignorées</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">titre</note>
+        </trans-unit>
+        <trans-unit id="SettingsViewModel_csvImport__0__sheets_imported___1__ID_skipped___2__Title_skipped_" translate="yes" xml:space="preserve">
+          <source>{0} sheets imported. {1} ID skipped. {2} Title skipped.</source>
+          <target state="translated">{0} fiches importés. {1} ID ignoré(s). {2} titre(s) sauté(s).</target>
+        </trans-unit>
+        <trans-unit id="Consts_GeneratedBy_Generated_By_MyStash" translate="yes" xml:space="preserve">
+          <source>Generated By MyStash</source>
+          <target state="translated" state-qualifier="mt-suggestion">Généré par MyStash</target>
+        </trans-unit>
+        <trans-unit id="Consts_BadPercent_Bad_percentage" translate="yes" xml:space="preserve">
+          <source>Bad percentage</source>
+          <target state="translated">Mauvais pourcentage</target>
+        </trans-unit>
+        <trans-unit id="Consts_EmptyFileName_File_name_is_empty" translate="yes" xml:space="preserve">
+          <source>File name is empty</source>
+          <target state="translated" state-qualifier="tm-suggestion">Nom de fichier vide</target>
+        </trans-unit>
+        <trans-unit id="Consts_FileExists_Destination_file_already_exists" translate="yes" xml:space="preserve">
+          <source>Destination file already exists</source>
+          <target state="translated">Le fichier de destination existe déjà</target>
+        </trans-unit>
+        <trans-unit id="Consts_SourceEmpty_No_data_in_source_to_process" translate="yes" xml:space="preserve">
+          <source>No data in source to process</source>
+          <target state="translated" state-qualifier="mt-suggestion">Pas de données dans la source à traiter</target>
+        </trans-unit>
+        <trans-unit id="Consts_SourceIsNull_Source_is_null" translate="yes" xml:space="preserve">
+          <source>Source is null</source>
+          <target state="translated" state-qualifier="mt-suggestion">Source a la valeur null</target>
+        </trans-unit>
+        <trans-unit id="ExportBase_GetFieldValue_Can_t_read_property__0_" translate="yes" xml:space="preserve">
+          <source>Can't read property {0}</source>
+          <target state="translated" state-qualifier="mt-suggestion">Impossible de lire la propriété {0}</target>
+        </trans-unit>
+        <trans-unit id="ExportClipboardCsv_ExecuteOutput_no_shell_execute_in_PCL_version" translate="yes" xml:space="preserve">
+          <source>no shell execute in PCL version</source>
+          <target state="translated">Pas d'exédution en mode PCL</target>
+        </trans-unit>
+        <trans-unit id="ExportClipboardCsv_CloseOutput_MyStash_CSV_data" translate="yes" xml:space="preserve">
+          <source>MyStash CSV data</source>
+          <target state="translated">Données CSV MyStash</target>
+        </trans-unit>
+        <trans-unit id="ExportClipboardSql_ExecuteOutput_no_shell_execute_in_PCL_version" translate="yes" xml:space="preserve">
+          <source>no shell execute in PCL version</source>
+          <target state="translated">Pas d'exédution en mode PCL</target>
+        </trans-unit>
+        <trans-unit id="ExportClipboardSql_CloseOutput_MyStash_SQL_data" translate="yes" xml:space="preserve">
+          <source>MyStash SQL data</source>
+          <target state="translated" state-qualifier="mt-suggestion">Données SQL MyStash</target>
+        </trans-unit>
+        <trans-unit id="ImportViewModel_Mode__0__Data_Import" translate="yes" xml:space="preserve">
+          <source>{0} Data Imported</source>
+          <target state="translated">{0} données importées</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">titre fenetre import (non visible car modale)</note>
+        </trans-unit>
+        <trans-unit id="ViewImport_Explanation" translate="yes" xml:space="preserve">
+          <source>Paste here the FULL text of a preceding My Stash export. Then click Ok to proceed</source>
+          <target state="translated">Coller ici le texte intégral d’une exportation précédente de MyStash. Puis cliquez sur Ok pour continuer.</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_AutoLock" translate="yes" xml:space="preserve">
+          <source>Auto Lock</source>
+          <target state="translated" state-qualifier="mt-suggestion">Verrouillage automatique</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ClearDb" translate="yes" xml:space="preserve">
+          <source>Clear Data before import</source>
+          <target state="translated" state-qualifier="mt-suggestion">Effacer les données avant l’importation</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_EncryptedExport" translate="yes" xml:space="preserve">
+          <source>Encrypt exported data</source>
+          <target state="translated" state-qualifier="mt-suggestion">Crypter les données exportées</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Explain" translate="yes" xml:space="preserve">
+          <source>By default exported data are placed in the clipboard</source>
+          <target state="translated" state-qualifier="mt-suggestion">Par défaut les données exportées sont placées dans le presse-papiers</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ExportCsv" translate="yes" xml:space="preserve">
+          <source>Export to CSV</source>
+          <target state="translated" state-qualifier="mt-suggestion">Exporter au format CSV</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ExportSql" translate="yes" xml:space="preserve">
+          <source>Export to SQL</source>
+          <target state="translated" state-qualifier="mt-suggestion">Exporter vers SQL</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Go" translate="yes" xml:space="preserve">
+          <source>Go!</source>
+          <target state="translated">Go !</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ImportCsv" translate="yes" xml:space="preserve">
+          <source>Import CSV data</source>
+          <target state="translated" state-qualifier="mt-suggestion">Importer des données CSV</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Language" translate="yes" xml:space="preserve">
+          <source>App language</source>
+          <target state="translated">Langue de l'App</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_LockOnHidde" translate="yes" xml:space="preserve">
+          <source>Lock on hide</source>
+          <target state="translated">Verrouillé quand caché</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_SearchEverywhere" translate="yes" xml:space="preserve">
+          <source>Search everywhere</source>
+          <target state="translated">Rechercher partout</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_SearchInNotes" translate="yes" xml:space="preserve">
+          <source>Search in notes</source>
+          <target state="translated" state-qualifier="mt-suggestion">Rechercher dans les notes</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Section2" translate="yes" xml:space="preserve">
+          <source>Search options</source>
+          <target state="translated" state-qualifier="tm-suggestion">Options de recherche</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Section3" translate="yes" xml:space="preserve">
+          <source>Security</source>
+          <target state="translated" state-qualifier="tm-suggestion">Sécurité</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Section4" translate="yes" xml:space="preserve">
+          <source>Misc</source>
+          <target state="translated" state-qualifier="tm-suggestion">Divers</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Section5" translate="yes" xml:space="preserve">
+          <source>Data Export</source>
+          <target state="translated" state-qualifier="mt-suggestion">Exportation de données</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Section6" translate="yes" xml:space="preserve">
+          <source>Data import</source>
+          <target state="translated" state-qualifier="tm-suggestion">Importation de données</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Share" translate="yes" xml:space="preserve">
+          <source>Share data</source>
+          <target state="translated">Partager les données</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_Shuffle" translate="yes" xml:space="preserve">
+          <source>Shuffle keys (login screen)</source>
+          <target state="translated">Mélanger les touches (écran de connexion)</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_SkipId" translate="yes" xml:space="preserve">
+          <source>Skip existing ID's</source>
+          <target state="translated">Skip ID existants</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_SkipTitles" translate="yes" xml:space="preserve">
+          <source>Skip existing titles</source>
+          <target state="translated" state-qualifier="mt-suggestion">Sauter les titres existants</target>
+        </trans-unit>
+        <trans-unit id="ViewStteings_Section1" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="ViewStteings_Title" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="VSSettings_ShowDates" translate="yes" xml:space="preserve">
+          <source>Show date in grids</source>
+          <target state="translated" state-qualifier="mt-suggestion">Afficher la date dans les grilles</target>
+        </trans-unit>
+        <trans-unit id="VSSettings_ShowLines" translate="yes" xml:space="preserve">
+          <source>Show lines in grids</source>
+          <target state="translated" state-qualifier="mt-suggestion">Afficher les lignes dans les grilles</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
