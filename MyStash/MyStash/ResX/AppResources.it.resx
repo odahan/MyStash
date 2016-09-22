@@ -348,7 +348,7 @@
     <value>Nessuno</value>
   </data>
   <data name="LeetMaker_LeetStrengthStr_Novice" xml:space="preserve">
-    <value>Utente inesperto</value>
+    <value>Inesperto</value>
   </data>
   <data name="LeetMaker_LeetStrengthStr_Beginner" xml:space="preserve">
     <value>Principiante</value>
@@ -378,7 +378,7 @@
     <value>Livello di offuscamento</value>
   </data>
   <data name="EditView_Title" xml:space="preserve">
-    <value>Posizione</value>
+    <value>Titolo</value>
   </data>
   <data name="DialogService_ShowMessage_Cancel" xml:space="preserve">
     <value>Annulla</value>
@@ -471,7 +471,7 @@
     <value>Modifica</value>
   </data>
   <data name="SettingsViewModel_EncryptedData_Uncrypted_data_export_is_not_safe" xml:space="preserve">
-    <value>Esportazione dei dati GME non è sicuro! Utilizzare questa modalità solo per buone ragioni.</value>
+    <value>Esportazione dei dati in chiaro è pericoloso ! Utilizzare questa modalità solo per buone ragioni.</value>
   </data>
   <data name="SettingsViewModel_EncryptedData_Warning" xml:space="preserve">
     <value>Avviso</value>
@@ -490,7 +490,7 @@
     <comment>titre</comment>
   </data>
   <data name="SettingsViewModel_exportData_Data_are_in_the_clipboard" xml:space="preserve">
-    <value>Sono dati negli Appunti!</value>
+    <value>Dati negli Appunti!</value>
   </data>
   <data name="SettingsViewModel_exportData_Error" xml:space="preserve">
     <value>Errore</value>
@@ -508,10 +508,10 @@
     <comment>titre</comment>
   </data>
   <data name="SettingsViewModel_importCSVWithData_No_data_have_been_imported_" xml:space="preserve">
-    <value>I dati non sono stati importati.</value>
+    <value>Nessun dati importati.</value>
   </data>
   <data name="SettingsViewModel_importCSVWithData__0__sheets_have_been_imported_" xml:space="preserve">
-    <value>{0} fogli sono stati importati.</value>
+    <value>{0} fogli importati.</value>
   </data>
   <data name="SettingsViewModel_importSql_Not_implemented" xml:space="preserve">
     <value>Non implementato</value>
@@ -530,7 +530,7 @@
     <value>il campo {0} non può essere trovato</value>
   </data>
   <data name="SettingsViewModel_csvImport_Corrupted_data__1st_line_missing_" xml:space="preserve">
-    <value>Dati danneggiati (1 ° riga mancante)</value>
+    <value>Dati danneggiati (1° riga mancante)</value>
   </data>
   <data name="SettingsViewModel_csvImport___0___is_not_a_valid_ID" xml:space="preserve">
     <value>'{0}' non è un ID valido</value>
@@ -561,7 +561,7 @@
     <value>Generato da MyStash</value>
   </data>
   <data name="Consts_BadPercent_Bad_percentage" xml:space="preserve">
-    <value>Percentuale di male</value>
+    <value>Percentuale non valida</value>
   </data>
   <data name="Consts_EmptyFileName_File_name_is_empty" xml:space="preserve">
     <value>Il nome di file è vuoto.</value>
@@ -570,7 +570,7 @@
     <value>File di destinazione esiste già</value>
   </data>
   <data name="Consts_SourceEmpty_No_data_in_source_to_process" xml:space="preserve">
-    <value>Non ci sono dati in origine per elaborare</value>
+    <value>Non dati in origine per elaborare</value>
   </data>
   <data name="Consts_SourceIsNull_Source_is_null" xml:space="preserve">
     <value>Source è null</value>
@@ -582,16 +582,16 @@
     <value>shell non eseguire nella versione PCL</value>
   </data>
   <data name="ExportClipboardCsv_CloseOutput_MyStash_CSV_data" xml:space="preserve">
-    <value>Dati MyStash CSV</value>
+    <value>MyStash CSV Dati</value>
   </data>
   <data name="ExportClipboardSql_ExecuteOutput_no_shell_execute_in_PCL_version" xml:space="preserve">
     <value>shell non eseguire nella versione PCL</value>
   </data>
   <data name="ExportClipboardSql_CloseOutput_MyStash_SQL_data" xml:space="preserve">
-    <value>Dati SQL MyStash</value>
+    <value>MyStash SQL Dati</value>
   </data>
   <data name="ImportViewModel_Mode__0__Data_Import" xml:space="preserve">
-    <value>Importazione di dati {0}</value>
+    <value>{0} dati importati</value>
     <comment>titre fenetre import (non visible car modale)</comment>
   </data>
   <data name="ViewImport_Explanation" xml:space="preserve">
@@ -607,7 +607,7 @@
     <value>Crittografare dati esportati</value>
   </data>
   <data name="ViewSettings_Explain" xml:space="preserve">
-    <value>Per impostazione predefinita i dati esportati vengono inseriti negli Appunti</value>
+    <value>Per impostazione predefinita, i dati esportati vengono inseriti negli Appunti</value>
   </data>
   <data name="ViewSettings_ExportCsv" xml:space="preserve">
     <value>Esporta in formato CSV</value>
@@ -622,7 +622,7 @@
     <value>Importare dati CSV</value>
   </data>
   <data name="ViewSettings_Language" xml:space="preserve">
-    <value>Lingua app</value>
+    <value>App lingua </value>
   </data>
   <data name="ViewSettings_LockOnHidde" xml:space="preserve">
     <value>Bloccare il hidde</value>
@@ -634,7 +634,7 @@
     <value>Ricerca nelle note</value>
   </data>
   <data name="ViewSettings_Section2" xml:space="preserve">
-    <value>Opzioni ricerca</value>
+    <value>Opzioni di ricerca</value>
   </data>
   <data name="ViewSettings_Section3" xml:space="preserve">
     <value>Sicurezza</value>
@@ -646,30 +646,33 @@
     <value>Esportazione dei dati</value>
   </data>
   <data name="ViewSettings_Section6" xml:space="preserve">
-    <value>Importazione dati</value>
+    <value>Dati importazione</value>
   </data>
   <data name="ViewSettings_Share" xml:space="preserve">
     <value>Condivisione dei dati</value>
   </data>
   <data name="ViewSettings_Shuffle" xml:space="preserve">
-    <value>Tasti di shuffle (schermata di login)</value>
+    <value>Mescolare bottoni (schermata di login)</value>
   </data>
   <data name="ViewSettings_SkipId" xml:space="preserve">
-    <value>Skip esistenti ID</value>
+    <value>Saltare esistenti ID</value>
   </data>
   <data name="ViewSettings_SkipTitles" xml:space="preserve">
     <value>Saltare i titoli esistenti</value>
   </data>
-  <data name="ViewStteings_Section1" xml:space="preserve">
-    <value>impostazioni</value>
-  </data>
   <data name="ViewStteings_Title" xml:space="preserve">
-    <value>impostazioni</value>
+    <value>Impostazioni</value>
   </data>
   <data name="VSSettings_ShowDates" xml:space="preserve">
     <value>Visualizza data in griglie</value>
   </data>
   <data name="VSSettings_ShowLines" xml:space="preserve">
     <value>Visualizza linee in griglie</value>
+  </data>
+  <data name="ViewMainList_Params" xml:space="preserve">
+    <value>Impostazioni</value>
+  </data>
+  <data name="VSSettings_Visual" xml:space="preserve">
+    <value>Visivo</value>
   </data>
 </root>

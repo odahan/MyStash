@@ -11,6 +11,7 @@ namespace MyStash.Views
     {
         public MainView()
         {
+            InitializeComponent();
             Messenger.Default.Register<NotificationMessage<string>>(this, message =>
                                                                           { 
                                                                               if (message.Notification != Utils.GlobalMessages.AnimateDoorButton.ToString()) return;
@@ -36,11 +37,9 @@ namespace MyStash.Views
                                                                               tc.PlayAnimation();
                                                                               label.PlayAnimation();
                                                                           });
-            InitializeComponent();
             Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0); // iOS
             initNumbers();
             BindingContext = App.Locator.MainVM;
-            Resources["RoundedButton"] = ImageSource.FromResource("MyStash.Images.globalmetallicbutton.png");
         }
 
         private void initNumbers()

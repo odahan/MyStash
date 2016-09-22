@@ -765,9 +765,6 @@
   <data name="ViewSettings_SkipTitles" xml:space="preserve">
     <value>Skip existing titles</value>
   </data>
-  <data name="ViewStteings_Section1" xml:space="preserve">
-    <value>Settings</value>
-  </data>
   <data name="ViewStteings_Title" xml:space="preserve">
     <value>Settings</value>
   </data>
@@ -776,5 +773,11 @@
   </data>
   <data name="VSSettings_ShowLines" xml:space="preserve">
     <value>Show lines in grids</value>
+  </data>
+  <data name="ViewMainList_Params" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="VSSettings_Visual" xml:space="preserve">
+    <value>Visual</value>
   </data>
 </root>

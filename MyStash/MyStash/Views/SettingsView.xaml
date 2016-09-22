@@ -5,9 +5,9 @@
              xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
              x:Class="MyStash.Views.SettingsView"
              Title="{helpers:Translate ViewStteings_Title}" >
-  <TableView Intent="{helpers:Translate ViewStteings_Section1}">
-    <TableSection Title="Visual">
-      <SwitchCell Text="{helpers:Translate ViewStteings_Section1}" On="{Binding AppSettings.DisplayLinesInLists}"/>
+  <TableView Intent="Settings">
+    <TableSection Title="{helpers:Translate VSSettings_Visual}">
+      <SwitchCell Text="{helpers:Translate VSSettings_ShowLines}" On="{Binding AppSettings.DisplayLinesInLists}"/>
       <SwitchCell Text="{helpers:Translate VSSettings_ShowDates}" On="{Binding AppSettings.DisplayDateInLists}"/>
     </TableSection>
     <TableSection Title="{helpers:Translate ViewSettings_Section2}">
@@ -39,12 +39,12 @@
           <Button Text="{helpers:Translate ViewSettings_Go}" VerticalOptions="Center" HorizontalOptions="End" Command="{Binding DataCommand}" CommandParameter="0"/>
         </Grid>
       </ViewCell>
-      <ViewCell>
+      <!--<ViewCell>
         <Grid>
           <Label Text="{helpers:Translate ViewSettings_ExportSql}" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
           <Button Text="{helpers:Translate ViewSettings_Go}" VerticalOptions="Center" HorizontalOptions="End" Command="{Binding DataCommand}" CommandParameter="1"/>
         </Grid>
-      </ViewCell>
+      </ViewCell>-->
     </TableSection>
     <TableSection Title="{helpers:Translate ViewSettings_Section6}">
       <SwitchCell Text="{helpers:Translate ViewSettings_ClearDb}" On="{Binding ClearDbBeforeImport}"/>

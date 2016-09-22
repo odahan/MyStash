@@ -660,9 +660,6 @@
   <data name="ViewSettings_SkipTitles" xml:space="preserve">
     <value>Sauter les titres existants</value>
   </data>
-  <data name="ViewStteings_Section1" xml:space="preserve">
-    <value>Paramètres</value>
-  </data>
   <data name="ViewStteings_Title" xml:space="preserve">
     <value>Paramètres</value>
   </data>
@@ -671,5 +668,11 @@
   </data>
   <data name="VSSettings_ShowLines" xml:space="preserve">
     <value>Afficher les lignes dans les grilles</value>
+  </data>
+  <data name="ViewMainList_Params" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="VSSettings_Visual" xml:space="preserve">
+    <value>Visuel</value>
   </data>
 </root>

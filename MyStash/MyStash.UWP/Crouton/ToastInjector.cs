@@ -28,8 +28,7 @@ namespace MyStash.UWP.Crouton
                 frameStyleRd.Source = new Uri("ms-appx:///Crouton/FrameStyle.xaml",UriKind.RelativeOrAbsolute);
                 Application.Current.Resources.MergedDictionaries.Add(frameStyleRd);
                 frame.Style = Application.Current.Resources["MainFrameStyle"] as Style;
-
-                
+               
             });
         }
     }

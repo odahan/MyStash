@@ -19,6 +19,7 @@
         <Setter Property="HasUnevenRows" Value="True"/>
         <Setter Property="RowHeight" Value="26"/>
         <Setter Property="GroupHeaderTemplate">
+            <!-- ReSharper disable once Xaml.RedundantResource -->
           <DataTemplate>
             <ViewCell>
               <Grid>
@@ -28,6 +29,7 @@
           </DataTemplate>
         </Setter>
         <Setter Property="ItemTemplate">
+            <!-- ReSharper disable once Xaml.RedundantResource -->
           <DataTemplate>
             <ViewCell>
               <Grid>
@@ -75,6 +77,7 @@
   <TabbedPage.ToolbarItems>
     <ToolbarItem Text="{helpers:Translate ViewMainList_ChangePassword}" Icon="EditPassword.png" Command="{Binding ChangePasswordCommand}"/>
     <ToolbarItem Text="{helpers:Translate ViewMainList_LockScreen}" Icon="Lock.png" Command="{Binding LockScreenCommand}"/>
+    <ToolbarItem Text="{helpers:Translate ViewMainList_Params}" Icon="Params.png" Command="{Binding ParametersCommand}"/>
   </TabbedPage.ToolbarItems>
 
   <!--ALL -->

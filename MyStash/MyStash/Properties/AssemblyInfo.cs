@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MyStash")]
 [assembly: AssemblyDescription("Keep your password in a good stash !")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("E-NAXOS / OLIVIER DAHAN")]
+[assembly: AssemblyCompany("OLIVIER DAHAN")]
 [assembly: AssemblyProduct("MyStash")]
 [assembly: AssemblyCopyright("Copyright ©  2016 Olivier Dahan")]
 [assembly: AssemblyTrademark("")]

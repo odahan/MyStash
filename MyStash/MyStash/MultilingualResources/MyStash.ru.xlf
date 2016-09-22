@@ -874,10 +874,6 @@
           <source>Skip existing titles</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Пропустить существующие титулы</target>
         </trans-unit>
-        <trans-unit id="ViewStteings_Section1" translate="yes" xml:space="preserve">
-          <source>Settings</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">параметры</target>
-        </trans-unit>
         <trans-unit id="ViewStteings_Title" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">параметры</target>
@@ -889,6 +885,14 @@
         <trans-unit id="VSSettings_ShowLines" translate="yes" xml:space="preserve">
           <source>Show lines in grids</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Показать линии сетки</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_Params" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Parameters</target>
+        </trans-unit>
+        <trans-unit id="VSSettings_Visual" translate="yes" xml:space="preserve">
+          <source>Visual</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">естественное</target>
         </trans-unit>
       </group>
     </body>

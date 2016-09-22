@@ -867,10 +867,6 @@
           <source>Skip existing titles</source>
           <target state="translated" state-qualifier="mt-suggestion">Sauter les titres existants</target>
         </trans-unit>
-        <trans-unit id="ViewStteings_Section1" translate="yes" xml:space="preserve">
-          <source>Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
-        </trans-unit>
         <trans-unit id="ViewStteings_Title" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
@@ -882,6 +878,14 @@
         <trans-unit id="VSSettings_ShowLines" translate="yes" xml:space="preserve">
           <source>Show lines in grids</source>
           <target state="translated" state-qualifier="mt-suggestion">Afficher les lignes dans les grilles</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_Params" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+          <target state="translated" state-qualifier="tm-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="VSSettings_Visual" translate="yes" xml:space="preserve">
+          <source>Visual</source>
+          <target state="translated" state-qualifier="tm-suggestion">Visuel</target>
         </trans-unit>
       </group>
     </body>

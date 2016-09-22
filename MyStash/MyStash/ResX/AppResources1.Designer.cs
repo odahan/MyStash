@@ -1687,6 +1687,15 @@ namespace MyStash.ResX {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parameters.
+        /// </summary>
+        internal static string ViewMainList_Params {
+            get {
+                return ResourceManager.GetString("ViewMainList_Params", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
         internal static string ViewMainList_Search {
@@ -1968,15 +1977,6 @@ namespace MyStash.ResX {
         /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
-        internal static string ViewStteings_Section1 {
-            get {
-                return ResourceManager.GetString("ViewStteings_Section1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Settings.
-        /// </summary>
         internal static string ViewStteings_Title {
             get {
                 return ResourceManager.GetString("ViewStteings_Title", resourceCulture);
@@ -2016,6 +2016,15 @@ namespace MyStash.ResX {
         internal static string VSSettings_ShowLines {
             get {
                 return ResourceManager.GetString("VSSettings_ShowLines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visual.
+        /// </summary>
+        internal static string VSSettings_Visual {
+            get {
+                return ResourceManager.GetString("VSSettings_Visual", resourceCulture);
             }
         }
     }

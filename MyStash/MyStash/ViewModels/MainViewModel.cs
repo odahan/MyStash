@@ -14,8 +14,8 @@ namespace MyStash.ViewModels
             TapCommand = new Command<string>(s =>
                                                   {
                                                       UserInteraction();
-                                                      CurrentValue += s;
                                                       MessengerInstance.Send(new NotificationMessage<string>(s, Utils.GlobalMessages.AnimateDoorButton.ToString()));
+                                                      CurrentValue += s;
                                                   });
 
         }

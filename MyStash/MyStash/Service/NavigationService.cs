@@ -92,6 +92,7 @@ namespace MyStash.Service
                 }
 
                 if (constructor == null)
+                    // ReSharper disable once HeuristicUnreachableCode
                 {
                     throw new InvalidOperationException(
                         string.Format(AppResources.NavigationService_getPage_Aucun_constructeur_approprié_trouvé, pageKey));

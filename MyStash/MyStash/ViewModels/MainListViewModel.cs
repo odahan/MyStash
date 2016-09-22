@@ -31,6 +31,7 @@ namespace MyStash.ViewModels
             SearchCommand = new Command(() => { UserInteraction(); loadData(); });
             LockScreenCommand = new Command(() => LoginSwitch.LogOut());
             ChangePasswordCommand = new Command(() => Navigation.ModalNavigateTo(PageName.SetPwPage.ToString(), true));
+            ParametersCommand = new Command(() => Navigation.NavigateTo(PageName.SettingsPage.ToString()));
             MessengerInstance.Register<NotificationMessage>(this, n =>
                                                                   {
                                                                       if (n.Notification == Utils.GlobalMessages.SettingsChanged.ToString())
@@ -70,6 +71,7 @@ namespace MyStash.ViewModels
 
         public Command LockScreenCommand { get; }
         public Command ChangePasswordCommand { get; }
+        public Command ParametersCommand { get; }
 
         [LocalizationRequired(false)]
         [Conditional("DEBUG")]

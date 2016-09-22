@@ -10,8 +10,7 @@
       <Style TargetType="controls:TapImage">
         <Setter Property="WidthRequest" Value="70"/>
         <Setter Property="HeightRequest" Value="70"/>
-        <Setter Property="Source"  Value="{DynamicResource RoundedButton}"/>     
-      
+        <Setter Property="Source"  Value="{helpers:ImageResource MyStash.Images.globalmetallicbuttonmini.png}"/>     
       </Style>
       <Style TargetType="controls:AnimatedTapLabel">
         <Setter Property="VerticalOptions" Value="Center" />
@@ -27,7 +26,7 @@
   <Grid RowSpacing="0" ColumnSpacing="0" Padding="10" BackgroundColor="White">
 
     <Image Source="{helpers:ImageResource MyStash.Images.globalbackground.jpg}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-    
+
     <Grid VerticalOptions="Center">
       <Grid.RowDefinitions>
         <RowDefinition Height="5*"/>
@@ -116,7 +115,7 @@
     </Grid>
 
 
-   
+
   </Grid>
 
 </ContentPage>
