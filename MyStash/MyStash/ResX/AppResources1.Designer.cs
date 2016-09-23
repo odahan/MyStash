@@ -1678,6 +1678,15 @@ namespace MyStash.ResX {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Entry.
+        /// </summary>
+        internal static string ViewMainList_NewEntry {
+            get {
+                return ResourceManager.GetString("ViewMainList_NewEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notes.
         /// </summary>
         internal static string ViewMainList_Notes {
@@ -1791,6 +1800,15 @@ namespace MyStash.ResX {
         internal static string ViewSettings_AutoLock {
             get {
                 return ResourceManager.GetString("ViewSettings_AutoLock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change App Password.
+        /// </summary>
+        internal static string ViewSettings_ChangePassword {
+            get {
+                return ResourceManager.GetString("ViewSettings_ChangePassword", resourceCulture);
             }
         }
         

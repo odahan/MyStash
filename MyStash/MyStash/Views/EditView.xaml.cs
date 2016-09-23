@@ -1,11 +1,12 @@
-﻿using MyStash.Models;
+﻿using MyStash.Controls;
+using MyStash.Models;
 using MyStash.ResX;
 using MyStash.ViewModels;
 using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class EditView : ContentPage
+    public partial class EditView : StashContentPage
     {
         public EditView()
         {

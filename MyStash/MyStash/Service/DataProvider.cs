@@ -15,14 +15,20 @@ namespace MyStash.Service
         [LocalizationRequired(false)]
         private const string DatabaseName = "Stash.db";
         private static readonly object locker = new object();
+        private static bool firstTime=true;
 
         private SQLiteConnection openConnexion()
         {
             var connection =
                 DependencyService.Get<ISqLite>().GetConnection(DatabaseName);
-            connection.CreateTable<InfoSheet>();
-            connection.MigrateTable<InfoSheet>(); // new fields are added
-            connection.CreateTable<AppSettingStorageItem>();
+            if (firstTime)
+            {
+                connection.CreateTable<InfoSheet>();
+                connection.MigrateTable<InfoSheet>(); // new fields are added
+                connection.CreateTable<AppSettingStorageItem>();
+                connection.MigrateTable<AppSettingStorageItem>(); // new fields are added
+                firstTime = false;
+            }
             return connection;
         }
 
@@ -59,7 +65,7 @@ namespace MyStash.Service
             switch (proFilter)
             {
                 case InfoSheet.ProFilter.All:
-                    pro = $"{(int)InfoSheet.ProFilter.Personal},{(int)InfoSheet.ProFilter.Profesional}";
+                    pro = $"{(int)InfoSheet.ProFilter.Profesional},{(int)InfoSheet.ProFilter.Personal}";
                     break;
                 case InfoSheet.ProFilter.Profesional:
                     pro = $"{(int)InfoSheet.ProFilter.Profesional}"; ;
@@ -74,7 +80,7 @@ namespace MyStash.Service
             switch (category)
             {
                 case InfoSheet.CategoryFilter.All:
-                    cat = $"{(int)InfoSheet.CategoryFilter.Login},{(int)InfoSheet.CategoryFilter.Misc},{(int)InfoSheet.CategoryFilter.Note}";
+                    cat = $"{(int)InfoSheet.CategoryFilter.Login},{(int)InfoSheet.CategoryFilter.Note},{(int)InfoSheet.CategoryFilter.Misc}";
                     break;
                 case InfoSheet.CategoryFilter.Login:
                     cat = $"{(int)InfoSheet.CategoryFilter.Login}";

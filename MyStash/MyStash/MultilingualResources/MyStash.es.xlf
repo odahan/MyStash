@@ -8,7 +8,7 @@
       <group id="MYSTASH/RESX/APPRESOURCES.RESX" datatype="resx">
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
           <source>MyStash</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">MyStash</target>
+          <target state="translated" state-qualifier="mt-suggestion">MyStash</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Application title</note>
         </trans-unit>
         <trans-unit id="EventToCommandBehavior_CantRegisterEvent" translate="yes" xml:space="preserve">
@@ -894,6 +894,14 @@
         <trans-unit id="VSSettings_Visual" translate="yes" xml:space="preserve">
           <source>Visual</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Visual</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_NewEntry" translate="yes" xml:space="preserve">
+          <source>New Entry</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nueva entrada</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ChangePassword" translate="yes" xml:space="preserve">
+          <source>Change App Password</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cambiar la contraseña de la aplicación</target>
         </trans-unit>
       </group>
     </body>

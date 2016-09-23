@@ -148,14 +148,14 @@ namespace MyStash.ViewModels
                                                   });
         }
 
-
+ 
         protected override void IncomingParameter(object parameter)
         {
             UserInteraction();
             originalSheet = parameter as InfoSheet;
             Sheet = (InfoSheet)originalSheet?.Clone();
             InEditMode = originalSheet != null;
-            if (Sheet == null) Sheet = new InfoSheet {Category = InfoSheet.CategoryFilter.Login};
+            if (Sheet == null) Sheet = new InfoSheet {Category = InfoSheet.CategoryFilter.Login, Pro = InfoSheet.ProFilter.Personal};
             DeleteCommand.ChangeCanExecute();
             CheckPasswordCommand.ChangeCanExecute();
         }

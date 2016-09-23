@@ -122,6 +122,11 @@ namespace MyStash.Service
             return page != null ? navigation?.PushModalAsync(page, animate) : Task.FromResult<Page>(null);
         }
 
+        public Task ModalDismiss()
+        {
+            return navigation?.PopModalAsync();
+        }
+
         public void Configure(string pageKey, Type pageType)
         {
             lock (pages)
@@ -130,11 +135,6 @@ namespace MyStash.Service
                 else
                     pages.Add(pageKey, pageType);
             }
-        }
-
-        public Task ModalDismiss()
-        {
-            return navigation?.PopModalAsync();
         }
 
 

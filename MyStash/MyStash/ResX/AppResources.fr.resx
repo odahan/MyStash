@@ -655,7 +655,7 @@
     <value>Mélanger les touches (écran de connexion)</value>
   </data>
   <data name="ViewSettings_SkipId" xml:space="preserve">
-    <value>Skip ID existants</value>
+    <value>Sauter ID existants</value>
   </data>
   <data name="ViewSettings_SkipTitles" xml:space="preserve">
     <value>Sauter les titres existants</value>
@@ -674,5 +674,11 @@
   </data>
   <data name="VSSettings_Visual" xml:space="preserve">
     <value>Visuel</value>
+  </data>
+  <data name="ViewMainList_NewEntry" xml:space="preserve">
+    <value>Nouvelle entrée</value>
+  </data>
+  <data name="ViewSettings_ChangePassword" xml:space="preserve">
+    <value>Changer le mot de passe</value>
   </data>
 </root>

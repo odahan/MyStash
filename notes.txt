@@ -1,5 +1,5 @@
 
-- relier form des paramètres au soft (menu)
+-- amélioration Si changement algo crypto rebalayer la DB pour réencoder avec nouvel algo (option ou direct ?)
 
 -- se rappeler du dernier onglet et se repositionner dessus par défaut
 -- lever l'autolock sur option more time car on doit pouvoir aller et revenir sinon le copy devient chiant

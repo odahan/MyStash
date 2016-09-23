@@ -893,6 +893,14 @@
           <source>Visual</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Visuell</target>
         </trans-unit>
+        <trans-unit id="ViewMainList_NewEntry" translate="yes" xml:space="preserve">
+          <source>New Entry</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Neuer Eintrag</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ChangePassword" translate="yes" xml:space="preserve">
+          <source>Change App Password</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">App-Passwort ändern</target>
+        </trans-unit>
       </group>
     </body>
   </file>

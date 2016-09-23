@@ -1,9 +1,10 @@
-﻿using MyStash.ViewModels;
+﻿using MyStash.Controls;
+using MyStash.ViewModels;
 using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class SetPwView : ContentPage
+    public partial class SetPwView : StashContentPage
     {
         public SetPwView(bool changePassWord)
         {

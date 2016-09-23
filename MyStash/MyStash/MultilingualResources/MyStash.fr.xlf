@@ -861,7 +861,7 @@
         </trans-unit>
         <trans-unit id="ViewSettings_SkipId" translate="yes" xml:space="preserve">
           <source>Skip existing ID's</source>
-          <target state="translated">Skip ID existants</target>
+          <target state="translated">Sauter ID existants</target>
         </trans-unit>
         <trans-unit id="ViewSettings_SkipTitles" translate="yes" xml:space="preserve">
           <source>Skip existing titles</source>
@@ -886,6 +886,14 @@
         <trans-unit id="VSSettings_Visual" translate="yes" xml:space="preserve">
           <source>Visual</source>
           <target state="translated" state-qualifier="tm-suggestion">Visuel</target>
+        </trans-unit>
+        <trans-unit id="ViewMainList_NewEntry" translate="yes" xml:space="preserve">
+          <source>New Entry</source>
+          <target state="translated" state-qualifier="tm-suggestion">Nouvelle entrée</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ChangePassword" translate="yes" xml:space="preserve">
+          <source>Change App Password</source>
+          <target state="translated">Changer le mot de passe</target>
         </trans-unit>
       </group>
     </body>

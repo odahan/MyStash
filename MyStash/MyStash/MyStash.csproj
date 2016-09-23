@@ -45,6 +45,7 @@
     <Compile Include="Controls\BindablePicker.cs" />
     <Compile Include="Controls\EventToCommandBehavior.cs" />
     <Compile Include="Controls\PasswordCheckerBehavior.cs" />
+    <Compile Include="Controls\StashContentPage.cs" />
     <Compile Include="Controls\TapImage.cs" />
     <Compile Include="Controls\WrapLayout.cs" />
     <Compile Include="Crouton\IToastNotificator.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Models\GroupedInfoSheetGroups.cs" />
     <Compile Include="Service\IDataProvider.cs" />
     <Compile Include="Service\ILoginSwitch.cs" />
+    <Compile Include="Service\INavigationAware.cs" />
     <Compile Include="Service\INavigationService2.cs" />
     <Compile Include="Models\InfoSheetGroup.cs" />
     <Compile Include="Service\DataProvider.cs" />

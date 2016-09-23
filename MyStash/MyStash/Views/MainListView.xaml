@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<controls:StashTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
              xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
@@ -75,7 +75,8 @@
   </TabbedPage.Resources>
   
   <TabbedPage.ToolbarItems>
-    <ToolbarItem Text="{helpers:Translate ViewMainList_ChangePassword}" Icon="EditPassword.png" Command="{Binding ChangePasswordCommand}"/>
+    <!--<ToolbarItem Text="{helpers:Translate ViewMainList_ChangePassword}" Icon="EditPassword.png" Command="{Binding ChangePasswordCommand}"/>-->
+    <ToolbarItem Text="{helpers:Translate ViewMainList_NewEntry}" Icon="add.png" Command="{Binding NewEntryCommand}"/>
     <ToolbarItem Text="{helpers:Translate ViewMainList_LockScreen}" Icon="Lock.png" Command="{Binding LockScreenCommand}"/>
     <ToolbarItem Text="{helpers:Translate ViewMainList_Params}" Icon="Params.png" Command="{Binding ParametersCommand}"/>
   </TabbedPage.ToolbarItems>
@@ -235,4 +236,4 @@
   </ContentPage>
 
 
-</TabbedPage>
+</controls:StashTabbedPage>

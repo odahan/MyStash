@@ -2,10 +2,11 @@
 using GalaSoft.MvvmLight.Views;
 using MyStash.Crouton;
 using MyStash.Service;
+using Xamarin.Forms;
 
 namespace MyStash.ViewModels
 {
-    public class StashViewModelBase : ViewModelBase, IParameter, IGenericCommand
+    public class StashViewModelBase : ViewModelBase, IParameter, IGenericCommand, INavigationAware
     {
         #region shortcuts to services
 
@@ -46,6 +47,13 @@ namespace MyStash.ViewModels
 
         #endregion
 
+        #region Navigation awareness
 
+        public virtual void OnNavigatedTo()
+        { }
+
+        public virtual void OnNavigatedFrom()
+        { }
+        #endregion
     }
 }

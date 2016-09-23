@@ -894,6 +894,14 @@
           <source>Visual</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">естественное</target>
         </trans-unit>
+        <trans-unit id="ViewMainList_NewEntry" translate="yes" xml:space="preserve">
+          <source>New Entry</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Создание адреса</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ChangePassword" translate="yes" xml:space="preserve">
+          <source>Change App Password</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Изменение пароля приложения</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -675,4 +675,10 @@
   <data name="VSSettings_Visual" xml:space="preserve">
     <value>Visual</value>
   </data>
+  <data name="ViewMainList_NewEntry" xml:space="preserve">
+    <value>Nueva entrada</value>
+  </data>
+  <data name="ViewSettings_ChangePassword" xml:space="preserve">
+    <value>Cambiar la contraseña de la aplicación</value>
+  </data>
 </root>

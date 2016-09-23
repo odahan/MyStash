@@ -107,7 +107,6 @@ namespace MyStash.ViewModels
                                           UserInteraction();
                                           await Navigation.ModalNavigateTo(PageName.EditPage.ToString(), sheet);
                                       });
-
             MessengerInstance.Register<NotificationMessage>(this, async n =>
                                                                   {
                                                                       UserInteraction();
@@ -123,7 +122,9 @@ namespace MyStash.ViewModels
                                                                           return;
                                                                       }
                                                                   });
+
         }
+
 
         public Command CheckPasswordCommand { get; }
         public Command CopyLoginCommand { get; }

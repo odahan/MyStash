@@ -1,9 +1,10 @@
-﻿using MyStash.ViewModels;
+﻿using MyStash.Controls;
+using MyStash.ViewModels;
 using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class ImportView : ContentPage
+    public partial class ImportView : StashContentPage
     {
         public ImportView(ImportViewDataType dataType)
         {

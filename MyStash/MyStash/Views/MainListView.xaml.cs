@@ -1,10 +1,11 @@
-﻿using MyStash.Helpers;
+﻿using MyStash.Controls;
+using MyStash.Helpers;
 using MyStash.ViewModels;
 using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class MainListView : TabbedPage
+    public partial class MainListView : StashTabbedPage
     {
         public MainListView()
         {
@@ -15,6 +16,7 @@ namespace MyStash.Views
 
         private void listviewItempTapped(object sender, ItemTappedEventArgs e)
         {
+            App.Locator.LoginSwitch.ResetTimeout();
             var genericCommand = BindingContext as IGenericCommand;
             genericCommand?.SendCommand(Utils.GlobalCommands.ListviewTapped.ToString(),e.Item);
             var lv = sender as ListView;

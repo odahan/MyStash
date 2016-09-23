@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyStash.Controls;
 using MyStash.ViewModels;
 using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class CheckPwView : ContentPage
+    public partial class CheckPwView : StashContentPage
     {
         public CheckPwView()
         {

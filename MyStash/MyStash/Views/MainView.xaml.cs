@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class MainView : ContentPage
+    public partial class MainView : StashContentPage
     {
         public MainView()
         {

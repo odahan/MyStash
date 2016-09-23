@@ -675,4 +675,10 @@
   <data name="VSSettings_Visual" xml:space="preserve">
     <value>естественное</value>
   </data>
+  <data name="ViewMainList_NewEntry" xml:space="preserve">
+    <value>Создание адреса</value>
+  </data>
+  <data name="ViewSettings_ChangePassword" xml:space="preserve">
+    <value>Изменение пароля приложения</value>
+  </data>
 </root>

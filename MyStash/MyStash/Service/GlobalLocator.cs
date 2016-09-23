@@ -19,11 +19,11 @@ namespace MyStash.Service
             SimpleIoc.Default.Register<IDialogService>(() => new DialogService());
             var navigation = new NavigationService();
             SimpleIoc.Default.Register<INavigationService2>(() => navigation);
-            SimpleIoc.Default.Register<IDataProvider>(()=>new DataProvider());
-            SimpleIoc.Default.Register<IAppSettings>(()=>new AppSettings());
+            SimpleIoc.Default.Register<IDataProvider>(() => new DataProvider());
+            SimpleIoc.Default.Register<IAppSettings>(() => new AppSettings());
             // ReSharper disable once AssignNullToNotNullAttribute
-            SimpleIoc.Default.Register(()=> Application.Current as ILoginSwitch);
-            
+            SimpleIoc.Default.Register(() => Application.Current as ILoginSwitch);
+
 
             initializeNavigation(navigation);
         }
@@ -40,8 +40,8 @@ namespace MyStash.Service
             navigationService.Configure(PageName.EditPage.ToString(), typeof(EditView));
             navigationService.Configure(PageName.SettingsPage.ToString(), typeof(SettingsView));
             navigationService.Configure(PageName.DataImportPage.ToString(), typeof(ImportView));
-            
-            
+
+
 
 
             // enregistrement des types de ViewModels pour le locator
@@ -54,29 +54,31 @@ namespace MyStash.Service
             SimpleIoc.Default.Register<EditViewModel>();
             SimpleIoc.Default.Register<SettingsViewModel>();
             SimpleIoc.Default.Register<ImportViewModel>();
-            
-            
+
+
 
         }
 
         // not all VM need to be cached. To manage correctly a fresh new state each time it is better to recreate an instance in most cases.
 
+        //cached VM's
         public object MainVM => ServiceLocator.Current.GetInstance<MainViewModel>();
-
-        public object GenPwVM => new GeneratePwViewModel();  //ServiceLocator.Current.GetInstance<GeneratePwViewModel>();
-
-        public object SetPwVM => new SetPwViewModel(); // ServiceLocator.Current.GetInstance<SetPwViewModel>();
 
         public object MainListVM => ServiceLocator.Current.GetInstance<MainListViewModel>();
 
-        public object PwCheckVM => new CheckPwViewModel(); // ServiceLocator.Current.GetInstance<CheckPwViewModel>();
+        // non cached VM's
+        public object GenPwVM => new GeneratePwViewModel(); 
 
-        public object DetailVM => new DetailViewModel(); // ServiceLocator.Current.GetInstance<DetailViewModel>();
+        public object SetPwVM => new SetPwViewModel(); 
+
+        public object PwCheckVM => new CheckPwViewModel(); 
+
+        public object DetailVM => new DetailViewModel(); 
 
         // need a different one each time, easier to manage
-        public object EditVM => new EditViewModel(); //ServiceLocator.Current.GetInstance<EditViewModel>();
+        public object EditVM => new EditViewModel(); 
 
-        public object SettingsVM => new SettingsViewModel(); //ServiceLocator.Current.GetInstance<SettingsViewModel>();
+        public object SettingsVM => new SettingsViewModel(); 
 
         public object ImportDataVM => new ImportViewModel();
 

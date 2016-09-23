@@ -22,8 +22,10 @@ namespace MyStash.ViewModels
                 AppSettings.CultureDictionary.Select(pair => new Tuple<SupportedCulture, string>(pair.Key, pair.Value))
                     .OrderBy(tuple => (int)tuple.Item1)
                     .ToList();
+            ChangePasswordCommand = new Command(() => Navigation.ModalNavigateTo(PageName.SetPwPage.ToString(), true));
             DataCommand = new Command<string>(s =>
                                               {
+                                                  UserInteraction();
                                                   switch (s)
                                                   {
                                                       case "0":
@@ -43,11 +45,12 @@ namespace MyStash.ViewModels
 
                 );
             MessengerInstance.Register<NotificationMessage<string>>(this, n =>
-                                                                          {
-                                                                              if (n.Notification != Utils.GlobalMessages.ImportDataCopied.ToString()) return;
-                                                                              if (string.IsNullOrWhiteSpace(n.Content)) return;
-                                                                              importCSVWithData(n.Content);
-                                                                          });
+            {
+                UserInteraction();
+                if (n.Notification != Utils.GlobalMessages.ImportDataCopied.ToString()) return;
+                if (string.IsNullOrWhiteSpace(n.Content)) return;
+                importCSVWithData(n.Content);
+            });
             originalData = DataService.GetAllSheets();
             var pfl = AppSettings.PreferredCulture;
             var x = Languages.FirstOrDefault(tuple => tuple.Item1 == pfl);
@@ -71,6 +74,7 @@ namespace MyStash.ViewModels
             get { return selectedCultureItem; }
             set
             {
+                UserInteraction();
                 Set(ref selectedCultureItem, value);
                 AppSettings.PreferredCulture = value.Item1;
             }
@@ -81,6 +85,7 @@ namespace MyStash.ViewModels
             get { return encryptedData; }
             set
             {
+                UserInteraction();
                 if (Set(ref encryptedData, value) && value == false)
                     DialogService.ShowMessage(AppResources.SettingsViewModel_EncryptedData_Uncrypted_data_export_is_not_safe, AppResources.SettingsViewModel_EncryptedData_Warning);
             }
@@ -89,19 +94,19 @@ namespace MyStash.ViewModels
         public bool ShareOnExport
         {
             get { return shareOnExport; }
-            set { Set(ref shareOnExport, value); }
+            set { UserInteraction(); Set(ref shareOnExport, value); }
         }
 
         public bool SkipExistingTitle
         {
             get { return skipExistingTitle; }
-            set { Set(ref skipExistingTitle, value); }
+            set { UserInteraction(); Set(ref skipExistingTitle, value); }
         }
 
         public bool SkipExistingId
         {
             get { return skipExistingId; }
-            set { Set(ref skipExistingId, value); }
+            set { UserInteraction(); Set(ref skipExistingId, value); }
         }
 
 
@@ -110,6 +115,7 @@ namespace MyStash.ViewModels
             get { return clearDbBeforeImport; }
             set
             {
+                UserInteraction();
                 if (Set(ref clearDbBeforeImport, value) && value)
                     DialogService.ShowMessage(AppResources.SettingsViewModel_ClearDbBeforeImport, AppResources.SettingsViewModel_EncryptedData_Warning);
             }
@@ -118,9 +124,12 @@ namespace MyStash.ViewModels
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public Command<string> DataCommand { get; }
 
+        public Command ChangePasswordCommand { get; }
+
         [LocalizationRequired(false)]
         private void exportData(bool sql = false)
         {
+            UserInteraction();
             if (DataService.GetInfoSheetCount(InfoSheet.CategoryFilter.All, InfoSheet.ProFilter.All).Item1 < 1)
             {
                 Toasts.Notify(ToastNotificationType.Warning, AppResources.SettingsViewModel_exportData_No_data, AppResources.SettingsViewModel_exportData_No_data_to_export, TimeSpan.FromSeconds(3));
@@ -160,24 +169,28 @@ namespace MyStash.ViewModels
 
         private void exportCsv()
         {
+            UserInteraction();
             exportData();
         }
 
         [LocalizationRequired(false)]
         private void exportSql()
         {
+            UserInteraction();
             exportData(true);
         }
 
         [LocalizationRequired(false)]
         private void importCsv()
         {
+            UserInteraction();
            Navigation.ModalNavigateTo(PageName.DataImportPage.ToString(), ImportViewDataType.CSV);
         }
 
         [LocalizationRequired(false)]
         private void importCSVWithData(string data)
         {
+            UserInteraction();
             data = data.Replace("\r\n", "\n");
             var s = data.Split('\n').ToList();
             s = s.Select(x => x.NoControlAndTrim()).ToList();
@@ -197,12 +210,14 @@ namespace MyStash.ViewModels
 
         private void importSql()
         {
+            UserInteraction();
             Toasts.Notify(ToastNotificationType.Info, AppResources.SettingsViewModel_importSql_Not_implemented, AppResources.SettingsViewModel_importSql_No_SQL_import_in_this_version, TimeSpan.FromSeconds(3));
         }
 
         [LocalizationRequired(false)]
         private int csvImport(IEnumerable<string> data)
         {
+            UserInteraction();
             data = data.Where(s => !string.IsNullOrWhiteSpace(s.Trim())).ToList();
             // parse
             var lines = new List<string[]>();

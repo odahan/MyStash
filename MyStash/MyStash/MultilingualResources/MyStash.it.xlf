@@ -887,6 +887,14 @@
           <source>Visual</source>
           <target state="translated" state-qualifier="tm-suggestion">Visivo</target>
         </trans-unit>
+        <trans-unit id="ViewMainList_NewEntry" translate="yes" xml:space="preserve">
+          <source>New Entry</source>
+          <target state="translated">Nuovo record</target>
+        </trans-unit>
+        <trans-unit id="ViewSettings_ChangePassword" translate="yes" xml:space="preserve">
+          <source>Change App Password</source>
+          <target state="translated">Cambiare la password dell'App</target>
+        </trans-unit>
       </group>
     </body>
   </file>

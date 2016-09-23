@@ -1,11 +1,12 @@
 ﻿using System;
+using MyStash.Controls;
 using MyStash.Helpers;
 using MyStash.ViewModels;
 using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class GeneratePwView : ContentPage
+    public partial class GeneratePwView : StashContentPage
     {
         public GeneratePwView()
         {

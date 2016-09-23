@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
+using MyStash.Controls;
 using MyStash.Models;
 using MyStash.ResX;
 using MyStash.ViewModels;
@@ -11,7 +7,7 @@ using Xamarin.Forms;
 
 namespace MyStash.Views
 {
-    public partial class DetailView : ContentPage
+    public partial class DetailView : StashContentPage
     {
         [LocalizationRequired(false)]
         public DetailView()

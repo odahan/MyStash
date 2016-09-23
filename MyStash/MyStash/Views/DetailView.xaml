@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<controls:StashContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:MyStash.Controls;assembly=MyStash"
              xmlns:helpers="clr-namespace:MyStash.Helpers;assembly=MyStash"
@@ -161,4 +161,4 @@
       <Label HorizontalOptions="Center" Text="{Binding Id}" TextColor="Gray" FontSize="{StaticResource FontSizeMini}"/>
     </Grid>
   </Grid>
-</ContentPage>
+</controls:StashContentPage>
