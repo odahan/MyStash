@@ -317,7 +317,7 @@ namespace MyStash.Service
                     var skippedTitle = 0;
                     foreach (var sheet in sheets)
                     {
-                        var idExist = db.Table<InfoSheet>().Any(x => x.Id == sheet.Id);
+                        var idExist = (sheet.Id>0) && db.Table<InfoSheet>().Any(x => x.Id == sheet.Id);
                         if (skipExistingId && sheet.Id > 0 && idExist)
                         {
                             skippedId++;

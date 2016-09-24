@@ -214,6 +214,38 @@ namespace MyStash.ViewModels
             Toasts.Notify(ToastNotificationType.Info, AppResources.SettingsViewModel_importSql_Not_implemented, AppResources.SettingsViewModel_importSql_No_SQL_import_in_this_version, TimeSpan.FromSeconds(3));
         }
 
+        private List<string> csvSplit(char sep, char del, string line)
+        {
+            var list = new List<string>();
+            if (string.IsNullOrWhiteSpace(line)) return list;
+            line = line.Replace("\"\"", "\"");
+            line = line.Trim();
+            var inText = false;
+            var tmp = string.Empty;
+            foreach (char c in line)
+            {
+                if (c == sep && !inText)
+                {
+                    list.Add(tmp.Trim());
+                    tmp = string.Empty;
+                    continue;
+                }
+                if (c == del && inText)
+                {
+                    inText = false;
+                    continue;
+                }
+                if (c == del && !inText)
+                {
+                    inText = true;
+                    continue;
+                }
+                tmp += c;
+            }
+            list.Add(tmp.Trim());
+            return list;
+        }
+
         [LocalizationRequired(false)]
         private int csvImport(IEnumerable<string> data)
         {
@@ -225,22 +257,13 @@ namespace MyStash.ViewModels
             foreach (var s in data)
             {
                 curline++;
-                var k = s.Split(';');
-                if (k.Length < 1)
+                var k = csvSplit(';', '"', s);
+                if (k.Count < 1)
                 {
                     Toasts.Notify(ToastNotificationType.Error, AppResources.SettingsViewModel_csvImport_Import_failed, string.Format(AppResources.SettingsViewModel_csvImport_Import_aborted_bad_data_line__0_,curline + 1), TimeSpan.FromSeconds(3));
                     return 0;
                 }
-                var kk = new string[k.Length];
-                var i = 0;
-                foreach (var fragment in k)
-                {
-                    var f = fragment.Trim();
-                    f = f.Trim('"');
-                    f = f.Replace("\"\"", "\"");
-                    kk[i++] = f;
-                }
-                lines.Add(kk);
+                lines.Add(k.ToArray());
             }
             // test 1st line
             var fieldPositions = new List<fieldInfo>();
@@ -284,6 +307,7 @@ namespace MyStash.ViewModels
                                                     });
                 var fcDateTime = new Func<string, DateTime>(s =>
                                                             {
+                                                                if (string.IsNullOrEmpty(s)) return DateTime.Now;
                                                                 DateTime i;
                                                                 var b = DateTime.TryParse(s, out i);
                                                                 if (!b) throw new Exception(string.Format(AppResources.SettingsViewModel_csvImport___0___is_not_a_valid_date_time, s));
@@ -302,6 +326,7 @@ namespace MyStash.ViewModels
                                                                        });
                 var fcAlgo = new Func<string, SheetCrypting>(s =>
                                                              {
+                                                                 if (string.IsNullOrEmpty(s)) return SheetCrypting.None;
                                                                  try
                                                                  {
                                                                      return s.ToEnum(SheetCrypting.None);

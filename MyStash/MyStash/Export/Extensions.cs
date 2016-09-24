@@ -151,10 +151,11 @@ namespace MyStash.Export
         /// <returns>filtered text</returns>
         public static string NoControl(this string txt)
         {
-            txt = txt.Replace('\r', ' '); 
+            txt = txt.Replace("\n", " "); 
+            txt = txt.Replace("\r", " "); 
             var s = new StringBuilder(txt.Length);
             foreach (var c in txt)
-                if (c >= 32) s.Append(c);
+                if (!char.IsControl(c)) s.Append(c);
             return s.ToString();
         }
 
