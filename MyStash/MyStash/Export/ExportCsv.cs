@@ -185,8 +185,9 @@ namespace MyStash.Export
         /// <returns>Padded data if needed, else filtered data</returns>
         private string padout(string data, FieldInformation field)
         {
-            var rslt = !padData ? data : data.Pad(field.DisplayWidth, field.IsNumber);
-            return (VerifyQuote(rslt, '"', '"').NoControl());
+            var rslt = !padData ? data : data.Pad(field.DisplayWidth, field.IsNumber).NoControl();
+            //return (VerifyQuote(rslt, '"', '"').NoControl());
+            return rslt.Replace(quote,"''"); // adptation for mystash
         }
 
         /// <summary>

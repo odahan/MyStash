@@ -19,7 +19,7 @@
         <Setter Property="HasUnevenRows" Value="True"/>
         <Setter Property="RowHeight" Value="26"/>
         <Setter Property="GroupHeaderTemplate">
-            <!-- ReSharper disable once Xaml.RedundantResource -->
+          <!-- ReSharper disable once Xaml.RedundantResource -->
           <DataTemplate>
             <ViewCell>
               <Grid>
@@ -29,7 +29,7 @@
           </DataTemplate>
         </Setter>
         <Setter Property="ItemTemplate">
-            <!-- ReSharper disable once Xaml.RedundantResource -->
+          <!-- ReSharper disable once Xaml.RedundantResource -->
           <DataTemplate>
             <ViewCell>
               <Grid>
@@ -64,7 +64,7 @@
                 <Label Text="{Binding ModifiedOnStr}" TextColor="#9AB8DE" FontSize="14"
                        VerticalOptions="Center" HorizontalOptions="End"
                        Margin="0,6,38,0" IsVisible="{Binding Source={x:Reference MainTabbedPage}, Path=BindingContext.IsDateVisible}"/>
-                <BoxView Color="Silver" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Margin="0,0,12,0" 
+                <BoxView Color="Silver" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" Margin="0,0,12,0"
                          IsVisible="{Binding Source={x:Reference MainTabbedPage}, Path=BindingContext.IsLineVisible}"/>
               </Grid>
             </ViewCell>
@@ -73,7 +73,7 @@
       </Style>
     </ResourceDictionary>
   </TabbedPage.Resources>
-  
+
   <TabbedPage.ToolbarItems>
     <!--<ToolbarItem Text="{helpers:Translate ViewMainList_ChangePassword}" Icon="EditPassword.png" Command="{Binding ChangePasswordCommand}"/>-->
     <ToolbarItem Text="{helpers:Translate ViewMainList_NewEntry}" Icon="add.png" Command="{Binding NewEntryCommand}"/>
@@ -82,7 +82,7 @@
   </TabbedPage.ToolbarItems>
 
   <!--ALL -->
-  
+
   <ContentPage Title="{helpers:Translate ViewMainList_Tab_All_Title}" Padding="4" ClassId="ALL" Icon="ViewAll.png">
     <Grid>
       <Grid.RowDefinitions>
@@ -91,11 +91,12 @@
       </Grid.RowDefinitions>
       <StackLayout Grid.Row="0">
         <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
-        <ListView ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
-                  ItemsSource="{Binding AllSheets}" 
+        <ListView CachingStrategy="RecycleElement"
+                  ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+                  ItemsSource="{Binding AllSheets}"
                   GroupDisplayBinding="{Binding GroupName}"
                   GroupShortNameBinding="{Binding GroupShortName}">
-         </ListView>
+        </ListView>
       </StackLayout>
 
       <Grid Grid.Row="1" >
@@ -107,7 +108,7 @@
           <Label Text="{Binding MiscCountStr}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="12"/>
         </StackLayout>
         <controls:BindablePicker VerticalOptions="Center" HorizontalOptions="End" WidthRequest="140" Margin="0,0,-5,0"
-                                 ItemsSource="{Binding ProFilterItems}" DisplayProperty="Item2" 
+                                 ItemsSource="{Binding ProFilterItems}" DisplayProperty="Item2"
           SelectedItem="{Binding ProfilterItem, Mode=TwoWay}" />
 
       </Grid>
@@ -131,7 +132,8 @@
       </Grid.RowDefinitions>
       <StackLayout Grid.Row="0">
         <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
-        <ListView  ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+        <ListView  CachingStrategy="RecycleElement"
+                   ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
                    ItemsSource="{Binding LoginSheets}"
                    GroupDisplayBinding="{Binding GroupName}"
                    GroupShortNameBinding="{Binding GroupShortName}">
@@ -160,7 +162,7 @@
   </ContentPage>
 
   <!-- NOTES -->
-  
+
   <ContentPage Title="{helpers:Translate ViewMainList_Notes}" Padding="4" ClassId="NOTES" Icon="Note.png">
     <Grid>
       <Grid.RowDefinitions>
@@ -168,8 +170,9 @@
         <RowDefinition Height="Auto"/>
       </Grid.RowDefinitions>
       <StackLayout Grid.Row="0">
-       <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
-        <ListView   ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+        <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
+        <ListView   CachingStrategy="RecycleElement"
+                    ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
                     ItemsSource="{Binding NoteSheets}"
                     GroupDisplayBinding="{Binding GroupName}"
                     GroupShortNameBinding="{Binding GroupShortName}">
@@ -198,7 +201,7 @@
   </ContentPage>
 
   <!-- MISC -->
-  
+
   <ContentPage Title="{helpers:Translate ViewMainList_MiscPlural}" Padding="4" ClassId="MISC" Icon="misc.png">
     <Grid>
       <Grid.RowDefinitions>
@@ -206,8 +209,9 @@
         <RowDefinition Height="Auto"/>
       </Grid.RowDefinitions>
       <StackLayout Grid.Row="0">
-       <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
-        <ListView   ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
+        <SearchBar Placeholder="{helpers:Translate ViewMainList_Search}" Text="{Binding FreeFilter}" SearchCommand="{Binding SearchCommand}" />
+        <ListView   CachingStrategy="RecycleElement"
+                    ItemTapped="listviewItempTapped" ItemAppearing="itemInOut" ItemDisappearing="itemInOut"
                     ItemsSource="{Binding MiscSheets}"
                     GroupDisplayBinding="{Binding GroupName}"
                     GroupShortNameBinding="{Binding GroupShortName}" >

@@ -218,7 +218,6 @@ namespace MyStash.ViewModels
         {
             var list = new List<string>();
             if (string.IsNullOrWhiteSpace(line)) return list;
-            line = line.Replace("\"\"", "\"");
             line = line.Trim();
             var inText = false;
             var tmp = string.Empty;
