@@ -67,7 +67,7 @@ namespace MyStash.ViewModels
             if (commandName != Utils.GlobalCommands.ListviewTapped.ToString()) return;
             var sheet = context as InfoSheet;
             if (sheet == null) return;
-            Navigation.NavigateTo(PageName.DetailPage.ToString(), sheet);
+            Navigation.NavigateTo(PageName.DetailPage.ToString(), sheet, false);
         }
 
         public Command LockScreenCommand { get; }

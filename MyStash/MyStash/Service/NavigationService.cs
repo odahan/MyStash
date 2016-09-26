@@ -51,7 +51,7 @@ namespace MyStash.Service
         {
             var page = getPage(pageKey, parameter);
             if (page == null || navigation == null) return Task.FromResult(false);
-            return navigation.PushAsync(page);
+            return navigation.PushAsync(page,animate);
         }
 
 

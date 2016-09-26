@@ -10,7 +10,7 @@
       <Style TargetType="controls:TapImage">
         <Setter Property="WidthRequest" Value="70"/>
         <Setter Property="HeightRequest" Value="70"/>
-        <Setter Property="Source"  Value="{helpers:ImageResource MyStash.Images.globalmetallicbuttonmini.png}"/>     
+        <Setter Property="Source"  Value="{helpers:ImageResource MyStash.Images.globalmetallicbuttonmini.png}"/>
       </Style>
       <Style TargetType="controls:AnimatedTapLabel">
         <Setter Property="VerticalOptions" Value="Center" />
@@ -23,10 +23,10 @@
     </ResourceDictionary>
   </ContentPage.Resources>
 
-  <Grid RowSpacing="0" ColumnSpacing="0" Padding="10" BackgroundColor="White">
+  <Grid RowSpacing="0" ColumnSpacing="0" Padding="10" BackgroundColor="White" >
 
     <Image Source="{helpers:ImageResource MyStash.Images.globalbackground.jpg}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-
+    
     <Grid VerticalOptions="Center">
       <Grid.RowDefinitions>
         <RowDefinition Height="5*"/>
@@ -110,12 +110,9 @@
         <controls:TapImage ClassId="+15" Grid.Column="1" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L15}, Path=Text}" Animate="False"/>
         <controls:AnimatedTapLabel Grid.Column="1" ClassId="*15" x:Name="L15" Command="{Binding TapCommand}" CommandParameter="{Binding Source={x:Reference Name=L15}, Path=Text}" Animate="False"/>
       </Grid>
-
-
     </Grid>
-
-
-
+    <BoxView x:Name="GrayBox" Color="Black" Opacity="0.3" IsVisible="True"/>
+    <Label x:Name="WaitingLabel" Text="Loading Data ..." IsVisible="True" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"  BackgroundColor="#00D9F5"/>
   </Grid>
 
 </controls:StashContentPage>

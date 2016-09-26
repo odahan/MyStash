@@ -28,7 +28,8 @@ namespace MyStash.Helpers
             DataModified,
             DataInserted,
             DataDeleted,
-            ImportDataCopied
+            ImportDataCopied,
+            LockScreenLoadingData
         }
 
         // disk storage key/value 

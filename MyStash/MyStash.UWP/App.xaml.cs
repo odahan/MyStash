@@ -3,6 +3,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
+using FFImageLoading.Forms.WinUWP;
 using MyStash.UWP.Crouton;
 //using ImageCircle.Forms.Plugin.UWP;
 using Xamarin.Forms;
@@ -53,7 +54,7 @@ namespace MyStash.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Xamarin.Forms.Forms.Init(e);
-                //ImageCircleRenderer.Init();
+                CachedImageRenderer.Init();
                 DependencyService.Register<ToastNotificatorImplementation>();
                 ToastNotificatorImplementation.Init();
 

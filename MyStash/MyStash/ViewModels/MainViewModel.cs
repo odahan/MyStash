@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight.Messaging;
+﻿using System.Threading.Tasks;
+using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Practices.ServiceLocation;
 using MyStash.Helpers;
 using MyStash.Service;
@@ -28,11 +29,13 @@ namespace MyStash.ViewModels
             ls?.ShowMainPage();
         }
 
-        private void checkLog()
+        private async Task  checkLog()
         {
             if (string.IsNullOrWhiteSpace(CurrentValue)) return;
             if (Settings.GetDoorLock() == CurrentValue)
             {
+                MessengerInstance.Send(new NotificationMessage(Utils.GlobalMessages.LockScreenLoadingData.ToString()));
+                await Task.Delay(200);
                 logOk();
                 return;
             }

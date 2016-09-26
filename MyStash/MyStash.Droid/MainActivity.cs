@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using FFImageLoading.Forms.Droid;
 using MyStash.Droid.Crouton;
 //using ImageCircle.Forms.Plugin.Droid;
 using Xamarin.Forms;
@@ -17,6 +18,8 @@ namespace MyStash.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
+
             AppDomain.CurrentDomain.UnhandledException += currentDomainOnUnhandledException;
             TaskScheduler.UnobservedTaskException += taskSchedulerOnUnobservedTaskException;
             /*
@@ -35,7 +38,7 @@ public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary
 
             displayCrashReport();
 
-            //ImageCircleRenderer.Init();
+            CachedImageRenderer.Init();
             DependencyService.Register<ToastNotificatorImplementation>();
             ToastNotificatorImplementation.Init(this);
             LoadApplication(new App());

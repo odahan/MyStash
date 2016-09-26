@@ -5,6 +5,7 @@
     "PCLStorage": "1.0.2",
     "Plugin.Share": "4.0.3",
     "SQLite.Net-PCL": "3.1.1",
+    "Xamarin.FFImageLoading.Forms": "2.1.8",
     "Xamarin.Forms": "2.3.2.127"
   },
   "frameworks": {

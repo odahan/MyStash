@@ -1,4 +1,6 @@
-﻿using Foundation;
+﻿using FFImageLoading.Forms;
+using FFImageLoading.Forms.Touch;
+using Foundation;
 using MyStash.iOS.Crouton;
 //using ImageCircle.Forms.Plugin.iOS;
 using UIKit;
@@ -22,7 +24,7 @@ namespace MyStash.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            //ImageCircleRenderer.Init();
+            CachedImageRenderer.Init();
             DependencyService.Register<ToastNotificatorImplementation>();
             ToastNotificatorImplementation.Init();
             LoadApplication(new App());

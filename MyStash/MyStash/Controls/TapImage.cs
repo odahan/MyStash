@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Input;
+using FFImageLoading.Forms;
 using JetBrains.Annotations;
 using Xamarin.Forms;
 
 namespace MyStash.Controls
 {
-    public class TapImage : Image
+    public class TapImage : CachedImage
     {
         private readonly TapGestureRecognizer gesture;
         public TapImage()
