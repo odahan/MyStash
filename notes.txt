@@ -2,12 +2,12 @@
 -- amélioration Si changement algo crypto rebalayer la DB pour réencoder avec nouvel algo (option ou direct ?)
 
 -- se rappeler du dernier onglet et se repositionner dessus par défaut
--- lever l'autolock sur option more time car on doit pouvoir aller et revenir sinon le copy devient chiant
+-- lever l'autolock sur option more time car on doit pouvoir aller et revenir sinon le copy devient enquiquinant
+-- Bug en entrée : le display lines / dates n'est pas pris en compte (si on va dans params et qu'on back sans rien faire ça prend bien les valeurs)
 
 --- Appeler Locator.LoginSwitch.ResetTimeout(); dans toutes les interactions users
 
 - voir si le timeout et tous ses timers créés ne pose pas de pb sinon utiliser le même timer de bout en bout ?
-- maintenance (copie db path, sauvegarde db...)
 - uwp 720p si rotation le picker ne se déclenche pas...
 
 - settings ne pas oublier prise en charge de Utils.GlobalMessages.SettingsChanged
@@ -21,30 +21,36 @@
 	En version finale il faudra implémenter la cryptoraphie correctement (pour l'instant c'est minimal)
 
 -*- Amélioration : backup/recup direct du fichier database
+-*- IMPORTANT : pour mise en production ou utilisation réelle implémenter un cryptage réel (Algo2 ne fait rien et est prévu pour ça)
+    L'encodage actuel n'est que pour les tests (simple XOR + Base64).
+-*- Faire le ménage du code non utilisé.
 
 
 *** localisation : https://developer.xamarin.com/guides/xamarin-forms/advanced/localization/
     voir aussi utilisation de MAT éventuellement : https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/
 
 
-** toasts ne passe pas en nuget, installé à la main depuis les sources dans chaque projet
-** picker sous android spell checking très laid sur le mot affiché, obligé de passer par du natif pour le virer et pas envie de le faire.
+** toasts ne passe pas en nuget, installé à la main depuis les sources dans chaque projet et modifié.
+   Une version récente semble régler les problèmes, il faudrait y revenir.
+** picker sous android spell checking très laid sur le mot affiché, obligé de passer par du natif pour le virer , à faire.
 ** Border du searchbar sous ios pas très beau, impossible à changer depuis XForms. idem ci-dessus.
 
 ** TapImage sur setpw marche plus d'un seul coup après des centaines de run... remplacé par un bouton.
 ** bug de binding sur les listes principales quand on applique le filtre pro plusieurs fois.
   En changeant les setter Set(ref..) en manuel (truc=value; raiseprop..) et en passant la valeur
-  à null avant ça a l'air de marcher. Y'a des trucs vraiment louches.
+  à null avant ça a l'air de marcher. Très étrange (bug XForms ?)
 ** bug ésotérique il y a un endroit où en changeant les relaycommand en command XForms ça passe sinon
-  plantage exotique. Pfuiii c'est de la magie noire ! Du coup utilisation systématique du Command partout.
-** Nécessité de Mvvm Light ? command bybye, viewmodellocator=code perso, ViewModeBase et Messagerie ? ça justifie ?
+  plantage exotique. Du coup utilisation systématique du Command XForms partout et pas de MvvmLight.
+** Nécessité de Mvvm Light ? command bybye, viewmodellocator=code perso, juste pour ViewModeBase et Messagerie ? ça justifie ? 
 ** Icon du tabbedpage pour ios marche si on place images dans le projet natif. pour éviter file not found et bien
    que pas utilisé par uwp et droid j'ai fait idem pour chaque plateforme. pour ios, 30x30, puis 60x60 @2x et 90x90 @3x (erreur ça devrait être 124).
    Idem toolbar. REGLE : image en PCL c'est ok, Icon, mettre dans projet natif
 
 
-* Localisation faites avec MAT
+* Localisation faites avec MAT. FR et EN ok, italien approx, russe et allemand purement expérimental, à vérifier entièrement.
 
+
+---------------------------------------------------------------------------------------------------------------------
 
 idées en natif pour copie de fichier :
 
