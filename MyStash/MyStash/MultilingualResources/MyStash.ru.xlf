@@ -902,6 +902,10 @@
           <source>Change App Password</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Изменение пароля приложения</target>
         </trans-unit>
+        <trans-unit id="ViewMain_LoadingData" translate="yes" xml:space="preserve">
+          <source>Loading Data...</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Загрузка данных...</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -15,6 +15,7 @@ namespace MyStash.Controls
             gesture.Tapped += gestureTapped;
             GestureRecognizers.Clear();
             GestureRecognizers.Add(gesture);
+            CacheType=FFImageLoading.Cache.CacheType.Memory;
         }
 
         [LocalizationRequired(false)]

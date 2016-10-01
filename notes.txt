@@ -124,3 +124,8 @@ gérer : void MainPage_DataRequested(Windows.ApplicationModel.DataTransfer.DataTr
 
 voir app example :
 https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ShareSource
+
+-------------
+Snake icon by Martin Berube http://www.how-to-draw-funny-cartoons.com/
+found on IconArchive.com
+Commercial used allow, link required.

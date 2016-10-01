@@ -112,7 +112,7 @@
       </Grid>
     </Grid>
     <BoxView x:Name="GrayBox" Color="Black" Opacity="0.3" IsVisible="True"/>
-    <Label x:Name="WaitingLabel" Text="Loading Data ..." IsVisible="True" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"  BackgroundColor="#00D9F5"/>
+    <Label x:Name="WaitingLabel" Text="{helpers:Translate ViewMain_LoadingData}" IsVisible="True" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"  BackgroundColor="#00D9F5"/>
   </Grid>
 
 </controls:StashContentPage>

@@ -681,4 +681,7 @@
   <data name="ViewSettings_ChangePassword" xml:space="preserve">
     <value>App-Passwort ändern</value>
   </data>
+  <data name="ViewMain_LoadingData" xml:space="preserve">
+    <value>Daten werden geladen...</value>
+  </data>
 </root>

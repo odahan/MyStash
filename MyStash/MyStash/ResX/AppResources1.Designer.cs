@@ -1615,6 +1615,15 @@ namespace MyStash.ResX {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading Data....
+        /// </summary>
+        internal static string ViewMain_LoadingData {
+            get {
+                return ResourceManager.GetString("ViewMain_LoadingData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please enter your code.
         /// </summary>
         internal static string ViewMain_Title {
